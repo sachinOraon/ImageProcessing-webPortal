@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	  
+
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/mdb.min.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
@@ -89,6 +89,20 @@
 		</ul>
 	</div></div>
 	
+	<div class='col-md-4'>
+	<div id="filter-box" class="zoomdiv" style='height: 420px; width: 400px;'>
+		<h2>Image Thresholding</h2>
+		<ul>
+			<li><a href="#">Simple Thresholding</a></li>
+			<ul>
+				<li><a href="filters/img_thres_php/simple/bin.php">&gt; Threshold Binary</a></li>
+				<li><a href="filters/img_thres_php/simple/bin_inv.php">&gt; Threshold Binary Inverted</a></li>
+				<li><a href="filters/img_thres_php/simple/trunc.php">&gt; Truncate</a></li>
+				<li><a href="filters/img_thres_php/simple/tozero.php">&gt; Threshold to Zero</a></li>
+				<li><a href="filters/img_thres_php/simple/tz_inv.php">&gt; Threshold to Zero Inverted</a></li>
+			</ul>
+		</ul>
+	</div></div>
 	
 	</div> <!-- ROW 2 ENDS -->
 	</div> <!-- CONATINER DIV ENDS -->
