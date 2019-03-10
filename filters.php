@@ -103,8 +103,28 @@
 			</ul>
 		</ul>
 	</div></div>
-	
 	</div> <!-- ROW 2 ENDS -->
+	
+	<div class="row"> <!-- ROW 3 BEGINS -->
+		<div class="col-md-4">
+			<div id="filter-box" class="zoomdiv" style='height: 420px; width: 400px; margin-left: 40px;'>
+				<h2>Image Thresholding</h2>
+				<ul>
+					<li><a href="#">Adaptive Thresholding</a></li>
+					<ul>
+						<li><a href="filters/img_thres_php/adaptive/mean.php">&gt; Mean</a></li>
+						<li><a href="filters/img_thres_php/adaptive/gauss.php">&gt; Gaussian</a></li>
+					</ul>
+					<li><a href="#">Otsu&rsquo;s Binarization</a></li>
+					<ul>
+						<li><a href="filters/img_thres_php/otsu/otsu.php">&gt; Otsu&rsquo;s Thresholding</a></li>
+						<li><a href="filters/img_thres_php/otsu/otsu_gaus.php">&gt; After Gaussian Filtering</a></li>
+					</ul>
+				</ul>
+			</div>
+		</div>
+	</div> <!-- ROW 3 ENDS -->
+	
 	</div> <!-- CONATINER DIV ENDS -->
 	
 </body>
