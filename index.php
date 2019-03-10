@@ -22,7 +22,7 @@
 	<div class="bg">
 		<p class="py-5 text-center"></p>
 		<div class="navbar">
-			<h2 class="animated fadeInLeft" style="color: white;">Image Processing</h2>
+			<h2 class="animated fadeInLeft" style="color: white;padding: 40px;">Image Processing</h2>
 			<a class="animated fadeInRight" style="margin-left: 40%" href="#home"><i class="fas fa-home"></i>Home</a>
 			<a class="animated fadeInRight" href="#filters"><i class="fas fa-filter"></i>Filters</a>
 			<a class="animated fadeInRight" href="#contact"><i class="fas fa-phone"></i>Contact</a>
