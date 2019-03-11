@@ -1,13 +1,18 @@
 <?php
 	session_start();
-	$result=shell_exec('python ../histogram_py/hist_gray_eq.py');
-	if(strcasecmp($result,'success')==0)
+	$cmd='python ../histogram_py/hist_gray_eq.py "'.$_SESSION['fname'].'" '.$_SESSION['fext'];
+	$cout=shell_exec($cmd);
+
+	if((strcasecmp($cout,'success')==0))
 	{
 		//set session variables for use in display.php
+		$tmp = explode('.'.$_SESSION['fext'], $_SESSION['fname'], -1);
+		$tmpname=current($tmp);
 		$_SESSION['title']='Histogram Equalization';
-		$_SESSION['hist']='../../images/abc_hist_gray.jpg';
-		$_SESSION['histeq']='../../images/abc_hist_gray_eq.jpg';
-		$_SESSION['outimg']='../../images/abc_gray_eq.jpg';
+		$_SESSION['hist_gray']='../../images/'.$tmpname.'_hist_gray.'.$_SESSION['fext'];
+		$_SESSION['gray_img']='../../images/'.$tmpname.'_gray.'.$_SESSION['fext'];
+		$_SESSION['gray_eq']='../../images/'.$tmpname.'_gray_eq.'.$_SESSION['fext'];
+		$_SESSION['hist_gray_eq']='../../images/'.$tmpname.'_hist_gray_eq.'.$_SESSION['fext'];
 	}
 ?>
 
@@ -40,24 +45,24 @@
 		<div class="row">
 			<div class="col-md-5 img-box" style='margin-left:40px'>
 				<h3 class="text-center" style='font-family:Tw cen mt'>Grayscale Image</h3>
-				<img src='../../images/abc_gray.jpg' class='rounded img-fluid mx-auto d-block'>
+				<?php echo '<img src=\''.$_SESSION['gray_img'].'\' class=\'rounded img-fluid mx-auto d-block\'>'; ?>
 			</div>
 			<div class="col-md-1"></div>
 			<div class="col-md-5 img-box">
 				<h3 class="text-center" style='font-family:Tw cen mt'>After Histogram Equalization</h3>
-				<?php echo '<img src=\''.$_SESSION['outimg'].'\' class=\'mx-auto d-block img-fluid\'>'; ?>
+				<?php echo '<img src=\''.$_SESSION['gray_eq'].'\' class=\'mx-auto d-block img-fluid\'>'; ?>
 			</div>
 			<div class="col-md-2"></div>
 		</div> <!-- ROW 1 ENDS -->
 		<div class="row">
 			<div class="col-md-5 img-box" style='margin-left:40px; margin-top:30px'>
 				<h3 class="text-center" style='font-family:Tw cen mt'>Histogram</h3>
-				<?php echo '<img src=\''.$_SESSION['hist'].'\' class=\'mx-auto d-block img-fluid\'>'; ?>
+				<?php echo '<img src=\''.$_SESSION['hist_gray'].'\' class=\'mx-auto d-block img-fluid\'>'; ?>
 			</div>
 			<div class="col-md-1"></div>
 			<div class="col-md-5 img-box" style='margin-top:30px'>
 				<h3 class="text-center" style='font-family:Tw cen mt'>Equalized Histogram</h3>
-				<?php echo '<img src=\''.$_SESSION['histeq'].'\' class=\'mx-auto d-block img-fluid\'>'; ?>
+				<?php echo '<img src=\''.$_SESSION['hist_gray_eq'].'\' class=\'mx-auto d-block img-fluid\'>'; ?>
 			</div>
 			<div class="col-md-2"></div>
 		</div> <!-- ROW 2 ENDS -->

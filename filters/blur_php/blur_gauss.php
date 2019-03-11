@@ -1,12 +1,14 @@
 <?php
 	session_start();
-	$result=shell_exec('python ../blur_py/blur_gauss.py');
-	if(strcasecmp($result,'success')==0)
+	$cmd='python ../blur_py/blur_gauss.py "'.$_SESSION['fname'].'" '.$_SESSION['fext'];
+	$cout=shell_exec($cmd);
+	
+	if(!(strcasecmp($cout,'failed')==0))
 	{
 		//set session variables for use in display.php
 		$_SESSION['title']='Image Smoothing';
 		$_SESSION['filter']='After Gaussian Blurring';
-		$_SESSION['outimg']='images/abc_blur_gauss.jpg';
+		$_SESSION['outimg']='images/'.$cout;
 		
 		//call display.php
 		header('Location: ../../display.php');

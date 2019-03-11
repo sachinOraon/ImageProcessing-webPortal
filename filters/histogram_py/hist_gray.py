@@ -1,5 +1,6 @@
 import cv2
 import numpy as np
+import sys
 
 def hist_lines(im):
     h = np.zeros((300,256,3))
@@ -15,11 +16,20 @@ def hist_lines(im):
     y = np.flipud(h)
     return y
 
-img=cv2.imread('../../images/abc.jpg', cv2.IMREAD_UNCHANGED)
+image='../../images/'+sys.argv[1]
+
+img=cv2.imread(image, cv2.IMREAD_UNCHANGED)
 gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
 bins = np.arange(256).reshape(256,1)
 #show histogram in bin mode
 lines = hist_lines(img)
-cv2.imwrite('../../images/abc_gray.jpg',gray,[100])
-if cv2.imwrite('../../images/abc_hist_gray.jpg',lines,[100]): print('success',end='')
+
+tmp=sys.argv[1]
+ext=sys.argv[2]
+name=tmp[:len(tmp)-len(ext)-1]
+gray_img='../../images/'+name+'_gray'+'.'+ext
+hist_gray='../../images/'+name+'_hist_gray'+'.'+ext
+
+cv2.imwrite(gray_img,gray,[100])
+if cv2.imwrite(hist_gray,lines,[100]): print('success',end='')
 else: print('failed',end='')

@@ -1,12 +1,13 @@
 <?php
 	session_start();
-	$result=shell_exec('python ../../img_thres_py/adaptive/gauss.py');
-	if(strcasecmp($result,'success')==0)
+	$cmd='python ../../img_thres_py/adaptive/gauss.py "'.$_SESSION['fname'].'" '.$_SESSION['fext'];
+	$cout=shell_exec($cmd);
+	if(!(strcasecmp($cout,'failed')==0))
 	{
 		//set session variables for use in display.php
 		$_SESSION['title']='Image Thresholding';
 		$_SESSION['filter']='Adaptive Gaussian Thresholding';
-		$_SESSION['outimg']='images/abc_thres_gauss.jpg';
+		$_SESSION['outimg']='images/'.$cout;
 		
 		//call display.php
 		header('Location: ../../../display.php');

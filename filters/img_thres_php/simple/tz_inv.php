@@ -1,12 +1,13 @@
 <?php
 	session_start();
-	$result=shell_exec('python ../../img_thres_py/simple/tz_inv.py');
-	if(strcasecmp($result,'success')==0)
+	$cmd='python ../../img_thres_py/simple/tz_inv.py "'.$_SESSION['fname'].'" '.$_SESSION['fext'];
+	$cout=shell_exec($cmd);
+	if(!(strcasecmp($cout,'failed')==0))
 	{
 		//set session variables for use in display.php
 		$_SESSION['title']='Image Thresholding';
 		$_SESSION['filter']='Threshold to Zero Inverted [value = 127, max = 255]';
-		$_SESSION['outimg']='images/abc_thres_tzinv.jpg';
+		$_SESSION['outimg']='images/'.$cout;
 		
 		//call display.php
 		header('Location: ../../../display.php');

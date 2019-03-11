@@ -1,12 +1,16 @@
 <?php
 	session_start();
-	$result=shell_exec('python ../histogram_py/hist_col.py');
-	if(strcasecmp($result,'success')==0)
+	$cmd='python ../histogram_py/hist_col.py "'.$_SESSION['fname'].'" '.$_SESSION['fext'];
+	$cout=shell_exec($cmd);
+
+	if((strcasecmp($cout,'success')==0))
 	{
 		//set session variables for use in display.php
+		$tmp = explode('.'.$_SESSION['fext'], $_SESSION['fname'], -1);
+		$tmpname=current($tmp);
 		$_SESSION['title']='Plotting Histogram';
 		$_SESSION['filter']='Histogram For Color Image';
-		$_SESSION['outimg']='../../images/abc_hist_col.jpg';
+		$_SESSION['outimg']='../../images/'.$tmpname.'_hist_col.'.$_SESSION['fext'];
 	}
 ?>
 
@@ -41,7 +45,7 @@
 			
 			<div class="col-md-5 img-box" style='margin-left:40px'>
 				<h3 class="text-center" style='font-family:Tw cen mt'>Color Image</h3>
-				<img src='../../images/abc.jpg' class='rounded img-fluid mx-auto d-block'>
+				<?php echo '<img src=\'../../images/'.$_SESSION['fname'].'\' class=\'rounded img-fluid mx-auto d-block\'>'; ?>
 			</div>
 			<div class="col-md-1"></div>
 			<div class="col-md-5 img-box">

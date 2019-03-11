@@ -26,7 +26,6 @@ if(isset($_POST['upload'])){
 	if(in_array($_SESSION['fext'], $allowed)){
 		if($fileError === 0){
 			if($fileSize<5000000){
-				//$fileNameNew = 'abc'.'.'.$fileActualExt;
 				$fileDestination = "images/".$_SESSION['fname'];
 				if(move_uploaded_file($fileTmpName, $fileDestination)){
 					header('Location: filters.php');

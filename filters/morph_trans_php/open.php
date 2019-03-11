@@ -1,12 +1,13 @@
 <?php
 	session_start();
-	$result=shell_exec('python ../morph_trans_py/open.py');
-	if(strcasecmp($result,'success')==0)
+	$cmd='python ../morph_trans_py/open.py "'.$_SESSION['fname'].'" '.$_SESSION['fext'];
+	$cout=shell_exec($cmd);
+	if(!(strcasecmp($cout,'failed')==0))
 	{
 		//set session variables for use in display.php
 		$_SESSION['title']='Morphological Transformation';
 		$_SESSION['filter']='After opening';
-		$_SESSION['outimg']='images/abc_morph_open.jpg';
+		$_SESSION['outimg']='images/'.$cout;
 		
 		//call display.php
 		header('Location: ../../display.php');

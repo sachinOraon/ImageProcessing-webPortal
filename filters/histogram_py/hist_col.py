@@ -1,5 +1,6 @@
 import cv2
 import numpy as np
+import sys
 
 def hist_curve(im):
     h = np.zeros((300,256,3))
@@ -16,9 +17,17 @@ def hist_curve(im):
     y=np.flipud(h)
     return y
 
-img=cv2.imread('../../images/abc.jpg', cv2.IMREAD_UNCHANGED)
+image='../../images/'+sys.argv[1]
+
+img=cv2.imread(image, cv2.IMREAD_UNCHANGED)
 bins = np.arange(256).reshape(256,1)
 #show histogram for color image in curve mode
 curve = hist_curve(img)
-if cv2.imwrite('../../images/abc_hist_col.jpg',curve,[100]): print('success',end='')
+
+tmp=sys.argv[1]
+ext=sys.argv[2]
+name=tmp[:len(tmp)-len(ext)-1]
+hist_col='../../images/'+name+'_hist_col'+'.'+ext
+
+if cv2.imwrite(hist_col,curve,[100]): print('success',end='')
 else: print('failed',end='')
