@@ -30,7 +30,7 @@
 			
 			<div class="col-md-5 img-box" style='margin-left:40px;'>
 				<h3 class="text-center" style='font-family:Tw cen mt'>Original</h3>
-				<img src='images/abc.jpg' class='rounded img-fluid mx-auto d-block'>
+				<?php echo '<img src=\'images/'.$_SESSION['fname'].'\' class=\'rounded img-fluid mx-auto d-block\'>'; ?>
 			</div>
 			<div class="col-md-1"></div>
 			<div class="col-md-5 img-box">

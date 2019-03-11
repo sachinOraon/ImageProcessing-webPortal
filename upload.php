@@ -9,25 +9,25 @@ function alert($msg) {
 if(isset($_POST['upload'])){
 	if(!empty($_FILES['file']['name'])){
 	#getting details of file
-	$fileName = $_FILES['file']['name'];
+	$_SESSION['fname']=$_FILES['file']['name']; 
 	$fileTmpName = $_FILES['file']['tmp_name'];
 	$fileSize = $_FILES['file']['size'];
 	$fileError = $_FILES['file']['error'];
 	$fileType = $_FILES['file']['type'];
 	
 	#convert filename string to array
-	$fileExt = explode('.',$fileName);
+	$fileExt = explode('.',$_SESSION['fname']);
 	
 	#convert file extension to lowercase
-	$fileActualExt = strtolower(end($fileExt));
+	$_SESSION['fext']=strtolower(end($fileExt));
 	$allowed = array('jpg', 'jpeg', 'png');
 	
 	#check for allowed extensions
-	if(in_array($fileActualExt, $allowed)){
+	if(in_array($_SESSION['fext'], $allowed)){
 		if($fileError === 0){
 			if($fileSize<5000000){
-				$fileNameNew = 'abc'.'.'.$fileActualExt;
-				$fileDestination = "images/".$fileNameNew;
+				//$fileNameNew = 'abc'.'.'.$fileActualExt;
+				$fileDestination = "images/".$_SESSION['fname'];
 				if(move_uploaded_file($fileTmpName, $fileDestination)){
 					header('Location: filters.php');
 				}
