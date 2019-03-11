@@ -5,11 +5,13 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	  
+	 
 	<link href="css/all.css" rel="stylesheet">
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/mdb.min.css" rel="stylesheet">
 	<link href="css/home.css" rel="stylesheet">
+
+	
 </head>
 
 <body style="background-color:#232323;">
@@ -23,9 +25,9 @@
 		<p class="py-5 text-center"></p>
 		<div class="navbar">
 			<h2 class="animated fadeInLeft" style="color: white;padding: 40px;">Image Processing</h2>
-			<a class="animated fadeInRight" style="margin-left: 40%" href="#home"><i class="fas fa-home"></i>Home</a>
-			<a class="animated fadeInRight" href="#filters"><i class="fas fa-filter"></i>Filters</a>
-			<a class="animated fadeInRight" href="#contact"><i class="fas fa-phone"></i>Contact</a>
+			<a class="animated fadeInRight hoverable  peach-gradient" style="margin-left: 60%;border-radius: 80%" href="#home"><i class="fas fa-home"></i></a>
+			<a class="animated fadeInRight hoverable purple-gradient" href="#filters" style="border-radius: 90%"><i class="fas fa-filter"></i></a>
+			<a class="animated fadeInRight hoverable blue-gradient" style="border-radius: 60%" href="#contact"><i class="fas fa-phone"></i></a>
 		</div>
 
 		<div class="main">
@@ -35,8 +37,8 @@
 			</div>
 	  	
 			<form style="margin-left: 510px; margin-top: 10%" action="upload.php" method="POST" enctype="multipart/form-data">
-				<label><input id="choose" class="btn peach-gradient" type="file" name="file"></label>
-				<button class="btn peach-gradient" type="submit" name="upload">UPLOAD</button><br>
+				<label><input id="choose" class="btn peach-gradient hoverable" type="file" name="file"></label>
+				<button class="btn peach-gradient waves-effect" type="submit" name="upload">UPLOAD</button><br>
 				<?php
 					session_start();
 					if(isset($_SESSION['err']))
@@ -59,7 +61,7 @@
 				?>
 			</form>
 		</div>
-		<footer style="margin-top: 30%;" class="page-footer font-small cyan darken-3">
+		<footer style="margin-top: 30%;" class="page-footer font-small elegant-color">
 
 		<!-- Footer Elements -->
 		<div class="container">

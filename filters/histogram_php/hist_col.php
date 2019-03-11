@@ -19,6 +19,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<link href="../../css/bootstrap.min.css" rel="stylesheet">
+	
 	<style>
 		.img-box
 		{
@@ -32,8 +33,8 @@
 		<div class="row img-box" style="margin:10px;">
 			<div class="col-md-10"><h2>Image Processing</h2></div>
 			<div class="col-md-2">
-			<a href="../../filters.php" class="btn btn-primary" role="button">Back</a>
-			<a href="../../index.php" class="btn btn-success" role="button">Home</a>
+			<a href="../../filters.php" class="btn btn-primary peach-gradient" role="button">Back</a>
+			<a href="../../index.php" class="btn btn-success purple-gradient" role="button">Home</a>
 			</div>
 		</div><br><br>
 		<div class="row">

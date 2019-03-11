@@ -20,9 +20,9 @@
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/mdb.js"></script>
 	
-	<div class='container-fluid'><div class='row'>
+	<div class='container-fluid scrollbar-secondary'><div class='row'>
 	<div class='col-md-11'>
-	<div class="animated fadeInLeft" id="heading">
+	<div class="animated fadeInLeft slow" id="heading">
 	<h1>CHOOSE &nbsp;&nbsp;FILTERS <img src="img/filter.png"></h1>
 	</div></div>
 	<div class='col-md-1'>
