@@ -4,8 +4,9 @@ import sys
 image='../../images/'+sys.argv[1]
 
 img=cv2.imread(image, cv2.IMREAD_UNCHANGED)
-
-blur=cv2.GaussianBlur(img,(5,5),0)
+row=int(sys.argv[3])
+col=int(sys.argv[4])
+blur=cv2.GaussianBlur(img,(row,col),0)
 
 tmp=sys.argv[1]
 ext=sys.argv[2]

@@ -1,3 +1,7 @@
+<?php
+	function alert($msg) { echo "<script type='text/javascript'>alert('$msg');</script>"; }
+	session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,6 +38,7 @@
 
 		<?php
 			include 'filters/blur_php/avg_modal.php';
+			include 'filters/blur_php/gauss_modal.php';
 		?>
 
 		<div class='row' id='row1'> <!-- ROW 1 BEGINS -->
@@ -42,7 +47,7 @@
 					<h2>Image Blurring</h2>
 					<ul>
 						<li><a href="#row1" data-toggle="modal" data-target="#blur_avg">Averaging</a></li>
-						<li><a href="filters/blur_php/blur_gauss.php">Gaussian Blurring</a></li>
+						<li><a href="#row1" data-toggle="modal" data-target="#blur_gauss">Gaussian Blurring</a></li>
 						<li><a href="filters/blur_php/blur_med.php">Median Blurring</a>
 						<li><a href="filters/blur_php/blur_bilat.php">Bilateral Filtering</a></li>
 					</ul>
