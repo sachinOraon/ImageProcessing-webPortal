@@ -23,9 +23,9 @@
 		<p class="py-5 text-center"></p>
 		<div class="navbar">
 			<h2 class="animated fadeInLeft" style="color: white;">Image Processing</h2>
-			<a class="animated fadeInRight hoverable peach-gradient" style="margin-left: 60%;border-radius: 50%" href="#home"><i class="fas fa-home"></i></a>
-			<a class="animated fadeInRight hoverable purple-gradient" href="#filters" style="border-radius: 48%"><i class="fas fa-filter"></i></a>
-			<a class="animated fadeInRight hoverable blue-gradient" style="border-radius: 48%" href="#contact"><i class="fas fa-phone"></i></a>
+			<a class="animated fadeInRight hoverable peach-gradient waves-effect" style="margin-left: 60%;border-radius: 50%" href="#home"><i class="fas fa-home"></i></a>
+			<a class="animated fadeInRight hoverable purple-gradient waves-effect" href="#filters" style="border-radius: 48%"><i class="fas fa-filter"></i></a>
+			<a class="animated fadeInRight hoverable blue-gradient waves-effect" style="border-radius: 48%" href="#contact"><i class="fas fa-phone"></i></a>
 		</div>
 
 		<div class="main">
