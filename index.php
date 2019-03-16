@@ -23,9 +23,9 @@
 		<p class="py-5 text-center"></p>
 		<div class="navbar">
 			<h2 class="animated fadeInLeft" style="color: white;">Image Processing</h2>
-			<a class="animated fadeInRight hoverable  peach-gradient" style="margin-left: 60%;border-radius: 80%" href="#home"><i class="fas fa-home"></i></a>
-			<a class="animated fadeInRight hoverable purple-gradient" href="#filters" style="border-radius: 90%"><i class="fas fa-filter"></i></a>
-			<a class="animated fadeInRight hoverable blue-gradient" style="border-radius: 60%" href="#contact"><i class="fas fa-phone"></i></a>
+			<a class="animated fadeInRight hoverable peach-gradient waves-effect" style="margin-left: 60%;border-radius: 50%" href="#home"><i class="fas fa-home"></i></a>
+			<a class="animated fadeInRight hoverable purple-gradient waves-effect" href="#filters" style="border-radius: 48%"><i class="fas fa-filter"></i></a>
+			<a class="animated fadeInRight hoverable blue-gradient waves-effect" style="border-radius: 48%" href="#contact"><i class="fas fa-phone"></i></a>
 		</div>
 
 		<div class="main">
@@ -36,7 +36,7 @@
 	  	
 			<form style="margin-left: 510px; margin-top: 10%" action="upload.php" method="POST" enctype="multipart/form-data">
 				<label><input id="choose" class="btn peach-gradient hoverable waves-effect" type="file" name="file"></label>
-				<button class="btn peach-gradient waves-effect" type="submit" name="upload">UPLOAD</button><br>
+				<button class="btn peach-gradient waves-effect hoverable" type="submit" name="upload"><i class="fas fa-arrow-alt-circle-up"></i>&nbsp;UPLOAD</button><br>
 				<?php
 					session_start();
 					if(isset($_SESSION['err']))

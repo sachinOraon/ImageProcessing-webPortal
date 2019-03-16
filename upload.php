@@ -24,7 +24,7 @@ if(isset($_POST['upload'])){
 	
 	#check for allowed extensions
 	if(in_array($_SESSION['fext'], $allowed)){
-		if($fileError === 0){
+		if(getimagesize($fileTmpName)){
 			if($fileSize<5000000){
 				$fileDestination = "images/".$_SESSION['fname'];
 				if(move_uploaded_file($fileTmpName, $fileDestination)){

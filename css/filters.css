@@ -54,7 +54,7 @@ li{
 }
 
 .zoomdiv {
-	padding: 50px;
+	padding: 40px;
 	background-color: transparent;
 	transition: transform .3s;
 	margin: 0 auto;
