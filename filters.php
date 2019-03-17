@@ -147,7 +147,8 @@
 				<div id="filter-box" class="zoomdiv" style='height: 250px; width: 400px;'>
 					<h2>Simple intensity transformation</h2>
 					<ul>
-						<li><a href="filters/img_negative_php/negative.php" onclick="document.getElementById('s3').style.display=''">Image Negatives</a><div class="spinner-grow text-warning" id='s3' style="display: none;"></div></li>
+						<li><a href="filters/simple_int_trans/negative.php" onclick="document.getElementById('s3').style.display=''">Image Negatives</a><div class="spinner-grow text-warning" id='s3' style="display: none;"></div></li>
+						<li><a href="filters/simple_int_trans/cont_stretch_lin.php" onclick="document.getElementById('s4').style.display=''">Contrast Stretching [Linear]</a><div class="spinner-grow text-warning" id='s4' style="display: none;"></div></li>
 					</ul>
 				</div>
 			</div>
