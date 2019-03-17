@@ -40,7 +40,7 @@
 			include 'filters/blur_php/avg_modal.php';
 			include 'filters/blur_php/gauss_modal.php';
 		?>
-
+		
 		<div class='row' id='row1'> <!-- ROW 1 BEGINS -->
 			<div class='col-md-4'>
 				<div id="filter-box" class="zoomdiv" style='height: 340px; width: 400px; margin-left: 40px;'>
@@ -48,7 +48,7 @@
 					<ul>
 						<li><a href="#row1" data-toggle="modal" data-target="#blur_avg">Averaging</a></li>
 						<li><a href="#row1" data-toggle="modal" data-target="#blur_gauss">Gaussian Blurring</a></li>
-						<li><a href="filters/blur_php/blur_med.php">Median Blurring</a>
+						<li><a href="filters/blur_php/blur_med.php">Median Blurring</a></li>
 						<li><a href="filters/blur_php/blur_bilat.php">Bilateral Filtering</a></li>
 					</ul>
 				</div>
@@ -138,8 +138,8 @@
 				<div id="filter-box" class="zoomdiv" style='height: 250px; width: 400px; margin-left: 40px;'>
 					<h2>Gaussian Noise Reduction</h2>
 					<ul>
-						<li><a href="filters/noise_reduc_php/noise_reduc.php">Noise Reduction</a></li>
-						<li><a href="filters/noise_reduc_php/noise_reduc_bw.php">Noise Reduction For Grayscale Image</a></li>
+						<li><a href="filters/noise_reduc_php/noise_reduc.php" onclick="document.getElementById('s1').style.display=''">Noise Reduction</a><div class="spinner-grow text-warning" id='s1' style="display: none;"></div></li>
+						<li><div class="spinner-grow text-warning" id='s2' style="display: none;"></div><a href="filters/noise_reduc_php/noise_reduc_bw.php" onclick="document.getElementById('s2').style.display=''">Noise Reduction For Grayscale Image</a></li>
 					</ul>
 				</div>
 			</div>
@@ -147,7 +147,7 @@
 				<div id="filter-box" class="zoomdiv" style='height: 250px; width: 400px;'>
 					<h2>Simple intensity transformation</h2>
 					<ul>
-						<li><a href="filters/img_negative_php/negative.php">Image Negatives</a></li>
+						<li><a href="filters/img_negative_php/negative.php" onclick="document.getElementById('s3').style.display=''">Image Negatives</a><div class="spinner-grow text-warning" id='s3' style="display: none;"></div></li>
 					</ul>
 				</div>
 			</div>
