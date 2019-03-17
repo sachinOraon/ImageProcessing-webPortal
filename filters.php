@@ -144,11 +144,12 @@
 				</div>
 			</div>
 			<div class='col-md-4'>
-				<div id="filter-box" class="zoomdiv" style='height: 250px; width: 400px;'>
+				<div id="filter-box" class="zoomdiv" style='height: 300px; width: 400px;'>
 					<h2>Simple intensity transformation</h2>
 					<ul>
 						<li><a href="filters/simple_int_trans/negative.php" onclick="document.getElementById('s3').style.display=''">Image Negatives</a><div class="spinner-grow text-warning" id='s3' style="display: none;"></div></li>
 						<li><a href="filters/simple_int_trans/cont_stretch_lin.php" onclick="document.getElementById('s4').style.display=''">Contrast Stretching [Linear]</a><div class="spinner-grow text-warning" id='s4' style="display: none;"></div></li>
+						<li><a href="filters/simple_int_trans/cont_stretch_nlin.php" onclick="document.getElementById('s5').style.display=''">Contrast Stretching [Non Linear]</a><div class="spinner-grow text-warning" id='s5' style="display: none;"></div></li>
 					</ul>
 				</div>
 			</div>
