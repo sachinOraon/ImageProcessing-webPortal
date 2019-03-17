@@ -1,0 +1,117 @@
+Image Enhancement
+------------------
+	Enhancement by point processing
+	--------------------------------
+		Simple intensity transformation
+		--------------------------------
+			1) Image Negatives
+			2) Contrast Stretching
+			3) Clipping
+			4) Compression of Dynamic Range
+			5) Gray level slicing
+
+			TYPES OF FUNCTIONS IN ENHANCEMENT
+			----------------------------------
+			Linear Functions
+			-----------------
+				1) Negative Transformation
+				2) Identity Transformation
+
+			Logarithmic Functions
+			----------------------
+				1) Log Transformation
+				2) Inverse-log Transformation
+
+			Power-Law Functions
+			--------------------
+				1) nth power transformation
+
+		Histogram processing
+		---------------------
+			1) Histogram Equalization
+			2) Histogram Specification
+			3) Local Enhancement
+			---------------------
+				Enhancement through the neighbour pixels
+					1) Max
+					2) Min
+
+	Spatial filtering
+	------------------
+		1) Low pass filter
+		2) High pass filter
+		3) Band pass filter
+
+		Smoothing filters (for blurring and noise reduction)
+		------------------
+			1) LOW PASS FILTERING
+			2) MEDIAN FILTERING
+
+		Sharpening filters
+		-------------------
+			1) HIGH PASS FILTER
+			2) DERIVATIVE FILTERS
+			   -------------------
+				Roberts, Prewitt and Sobel operators
+
+	SPATIAL FILTERING IN MATLAB
+	----------------------------
+		g = imfilter(f, w, filtering_mode, boundary_options, size_options)
+		Where 'filtering_mode' can be-
+			corr (Correlation)
+			conv (Convolution)
+
+		LINEAR SPATIAL FILTERS
+		----------------------
+			Special Filter
+			w = fspecial('type', parameters)
+			Where 'type' can be 'average', 'disk', 'gaussian', 'laplacian', 'log', 'motion', 'prewitt', 'sobel', 'unsharp'
+
+		NON LINEAR FILTERS
+		-------------------
+			Order statistic filters/Rank filters
+				1) Min filter
+				2) Max filter
+				3) Median filter
+
+	Enhancement in the frequency domain
+	------------------------------------
+		Fourier Transform
+		------------------
+			Continuous One-Dimensional Fourier Transform and Its Inverse
+			Discrete One-Dimensional Fourier Transform and Its Inverse
+			Discrete 2-Dimensional Fourier Transform
+
+		Basic Filtering in the Frequency Domain
+		----------------------------------------
+			Notch Filter
+			Low Pass Filter
+			High Pass Filter
+
+		Smoothing Frequency Domain
+		---------------------------
+			Ideal Low-pass Filters
+			Butterworth Low-pass Filters
+			Gaussian Lowpass Filters
+
+		Sharpening Frequency Domain Filters
+		------------------------------------
+			HIGH-PASS FILTERING
+			--------------------
+				Ideal High-pass Filters
+				Butterworth High-pass Filters
+				Gaussian High-pass Filters
+
+			HOMOMORPHIC FILTERING
+			----------------------
+
+			SELECTIVE FILTERING
+			--------------------
+				Bandreject Filters
+				Bandpass Filters
+
+			THREE FILTERS : NOTCH FILTER
+			-----------------------------
+				Ideal
+				Butterworth
+				Gaussian
