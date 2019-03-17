@@ -143,6 +143,14 @@
 					</ul>
 				</div>
 			</div>
+			<div class='col-md-4'>
+				<div id="filter-box" class="zoomdiv" style='height: 250px; width: 400px;'>
+					<h2>Simple intensity transformation</h2>
+					<ul>
+						<li><a href="filters/img_negative_php/negative.php">Image Negatives</a></li>
+					</ul>
+				</div>
+			</div>
 		</div> <!-- ROW 3 ENDS -->
 
 	</div> <!-- CONATINER DIV ENDS -->
