@@ -1,0 +1,63 @@
+Image Restoration & Reconstruction
+-----------------------------------
+	Noise Models (Noise Probability Density Functions)
+	-------------------------------------------------
+		Gaussian
+		Rayleigh
+		Erlang (Gamma)
+		Exponential
+		Uniform
+		Impulse (Salt & Pepper Noise)
+
+	RESTORATION USING SPATIAL FILTERING
+	------------------------------------
+		Mean Filters
+		------------
+			Arithmetic mean filter
+			Geometric Mean filter
+			Harmonic Mean filter
+			Contraharmonic Mean filter
+
+		Order Statistic Filters
+		------------------------
+			Median filter
+			Max and min filter
+			Midpoint filter
+			Alpha trimmed mean filter
+
+		Adaptive Filters
+		-----------------
+			Adaptive local noise reduction filter
+			Adaptive median filter
+
+	Periodic Noise (Spatially dependent noise)
+	-------------------------------------------
+		Removing periodic noise by frequency domain filtering
+			BAND REJECT FILTERS
+			--------------------
+				Ideal Band Reject Filter
+				Butterworth Band Reject Filter
+				Gaussian Band Reject Filter
+
+			BAND PASS FILTERS (not very common)
+			------------------------------------
+
+			NOTCH FILTERS
+			--------------
+				NOTCH PASS FILTERS
+				-------------------
+					Ideal
+					Butterworth
+					Gaussian
+
+				NOTCH REJECT FILTERS
+				---------------------
+
+	ESTIMATING THE DEGRADATION FUNCTION
+	-----------------------------------
+		Estimation by Mathematical modeling
+		-----------------------------------
+			INVERSE FILTERING
+			MINIMUM MEAN SQUARE ERROR (WIENER) FILTERING
+			GEOMETRIC MEAN FILTER
+			CONSTRAINED LEAST SQUARES FILTERING
