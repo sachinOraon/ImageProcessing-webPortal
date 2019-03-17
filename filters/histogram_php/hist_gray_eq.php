@@ -47,24 +47,24 @@
 		<div class="row">
 			<div class="col-md-5 img-box" style='margin-left:40px'>
 				<h3 class="text-center" style='font-family:Tw cen mt'>Grayscale Image</h3>
-				<?php echo '<img src=\''.$_SESSION['gray_img'].'\' class=\'rounded img-fluid mx-auto d-block\'>'; ?>
+				<?php echo '<img src="'.$_SESSION['gray_img'].'" class=\'rounded img-fluid mx-auto d-block\'>'; ?>
 			</div>
 			<div class="col-md-1"></div>
 			<div class="col-md-5 img-box">
 				<h3 class="text-center" style='font-family:Tw cen mt'>After Histogram Equalization</h3>
-				<?php echo '<img src=\''.$_SESSION['gray_eq'].'\' class=\'mx-auto d-block img-fluid\'>'; ?>
+				<?php echo '<img src="'.$_SESSION['gray_eq'].'" class=\'mx-auto d-block img-fluid\'>'; ?>
 			</div>
 			<div class="col-md-2"></div>
 		</div> <!-- ROW 1 ENDS -->
 		<div class="row">
 			<div class="col-md-5 img-box" style='margin-left:40px; margin-top:30px'>
 				<h3 class="text-center" style='font-family:Tw cen mt'>Histogram</h3>
-				<?php echo '<img src=\''.$_SESSION['hist_gray'].'\' class=\'mx-auto d-block img-fluid\'>'; ?>
+				<?php echo '<img src="'.$_SESSION['hist_gray'].'" class=\'mx-auto d-block img-fluid\'>'; ?>
 			</div>
 			<div class="col-md-1"></div>
 			<div class="col-md-5 img-box" style='margin-top:30px'>
 				<h3 class="text-center" style='font-family:Tw cen mt'>Equalized Histogram</h3>
-				<?php echo '<img src=\''.$_SESSION['hist_gray_eq'].'\' class=\'mx-auto d-block img-fluid\'>'; ?>
+				<?php echo '<img src="'.$_SESSION['hist_gray_eq'].'" class=\'mx-auto d-block img-fluid\'>'; ?>
 			</div>
 			<div class="col-md-2"></div>
 		</div> <!-- ROW 2 ENDS -->

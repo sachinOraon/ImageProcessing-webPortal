@@ -47,12 +47,12 @@
 			
 			<div class="col-md-5 img-box" style='margin-left:40px'>
 				<h3 class="text-center" style='font-family:Tw cen mt'>Grayscale Image</h3>
-				<?php echo '<img src=\''.$_SESSION['gray_img'].'\' class=\'rounded img-fluid mx-auto d-block\'>'; ?>
+				<?php echo '<img src="'.$_SESSION['gray_img'].'" class=\'rounded img-fluid mx-auto d-block\'>'; ?>
 			</div>
 			<div class="col-md-1"></div>
 			<div class="col-md-5 img-box">
 				<h3 class="text-center" style='font-family:Tw cen mt'><?php echo $_SESSION['filter']; ?></h3>
-				<?php echo '<img src=\''.$_SESSION['outimg'].'\' class=\'mx-auto d-block img-fluid\'>'; ?>
+				<?php echo '<img src="'.$_SESSION['outimg'].'" class=\'mx-auto d-block img-fluid\'>'; ?>
 			</div>
 			<div class="col-md-2"></div>
 		</div>

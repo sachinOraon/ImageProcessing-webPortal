@@ -30,12 +30,12 @@
 			
 			<div class="col-md-5 img-box" style='margin-left:40px'>
 				<h3 class="text-center" style='font-family:Tw cen mt'>Original</h3>
-				<?php echo '<img src=\'images/'.$_SESSION['fname'].'\' class=\'rounded img-fluid mx-auto d-block\'>'; ?>
+				<?php echo '<img src="images/'.$_SESSION['fname'].'" class=\'rounded img-fluid mx-auto d-block\'>'; ?>
 			</div>
 			<div class="col-md-1"></div>
 			<div class="col-md-5 img-box">
 				<h3 class="text-center" style='font-family:Tw cen mt'><?php echo $_SESSION['filter']; ?></h3>
-				<?php echo '<img src=\''.$_SESSION['outimg'].'\' class=\'rounded img-fluid mx-auto d-block\'>'; ?>
+				<?php echo '<img src="'.$_SESSION['outimg'].'" class=\'rounded img-fluid mx-auto d-block\'>'; ?>
 			</div>
 		</div>
 	</div>
