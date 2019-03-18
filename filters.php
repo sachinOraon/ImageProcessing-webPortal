@@ -37,6 +37,7 @@
 		</div>
 
 		<?php
+			include 'parameters.php';
 			include 'filters/blur_php/avg_modal.php';
 			include 'filters/blur_php/gauss_modal.php';
 			include 'filters/simple_int_trans/modal_range_comp.php';

@@ -1,11 +1,3 @@
-<?php
-	if(isset($_POST['blur_avg']))
-	{
-		$_SESSION['inp_kWavg']=$_POST['inp_kWavg'];
-		$_SESSION['inp_kHavg']=$_POST['inp_kHavg'];
-		header('Location:filters/blur_php/blur_avg.php');
-	}
-?>
 <!-- Averaging Modal -->
 <div class="modal fade" id="blur_avg">
 	<div class="modal-dialog modal-dialog-centered">

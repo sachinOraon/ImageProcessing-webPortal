@@ -1,11 +1,3 @@
-<?php
-	if(isset($_POST['blur_gaus']))
-	{
-		$_SESSION['inp_kWgaus']=$_POST['inp_kWgaus'];
-		$_SESSION['inp_kHgaus']=$_POST['inp_kHgaus'];
-		header('Location:filters/blur_php/blur_gauss.php');
-	}
-?>
 <!-- Gaussian Blurring Modal -->
 <div class="modal fade" id="blur_gauss">
 	<div class="modal-dialog modal-dialog-centered">

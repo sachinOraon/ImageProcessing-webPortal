@@ -1,10 +1,3 @@
-<?php
-	if(isset($_POST['range_comp']))
-	{
-		$_SESSION['inp_varC']=$_POST['inp_varC'];
-		exit(header("Location: filters/simple_int_trans/range_comp.php"));
-	}
-?>
 <!-- Range Compression Modal -->
 <div class="modal fade" id="range_comp">
 	<div class="modal-dialog modal-dialog-centered">
