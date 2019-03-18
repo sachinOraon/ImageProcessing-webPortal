@@ -2,8 +2,8 @@
 	session_start();
 	$tmp = explode('.'.$_SESSION['fext'], $_SESSION['fname'], -1);
 	$tmpname=current($tmp);
-	$outfile=$tmpname.'_range_comp.'.$_SESSION['fext']; 
-	$outimg='../../images/'.$tmpname.'_range_comp.'.$_SESSION['fext'];
+	$outfile=$tmpname.'_range_comp.'.$_SESSION['fext'];
+	$outimg='../../images/'.$outfile;
 
 	$cmd='python range_comp.py "../../images/'.$_SESSION['fname'].'" "'.$outimg.'" '.$_SESSION['inp_varC'];
 	$cout=shell_exec($cmd);

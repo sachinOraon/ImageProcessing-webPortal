@@ -77,13 +77,14 @@
 				</div>
 			</div>
 			<div class='col-md-4'>
-				<div id="filter-box" class="zoomdiv" style='height: 340px; width: 400px;'>
+				<div id="filter-box" class="zoomdiv" style='height: 360px; width: 400px;'>
 					<h2>Image Gradients</h2>
 					<ul>
 						<li><a href="filters/img_grad_php/lap.php">Laplacian Derivatives</a></li>
 						<li><a href="filters/img_grad_php/sobx.php">Sobel X</a></li>
 						<li><a href="filters/img_grad_php/soby.php">Sobel Y</a></li>
 						<li><a href="filters/canny_php/canny.php">Canny Edge Detection</a></li>
+						<li><a href="filters/img_grad_php/prewitt_grad.php" onclick="document.getElementById('s6').style.display=''">Prewitt Filter </a><div class="spinner-grow text-warning" id='s6' style="display: none;"></div></li>
 					</ul>
 				</div>
 			</div>

@@ -3,7 +3,7 @@
 	$tmp = explode('.'.$_SESSION['fext'], $_SESSION['fname'], -1);
 	$tmpname=current($tmp);
 	$outfile=$tmpname.'_neg.'.$_SESSION['fext'];
-	$outimg='../../images/'.$tmpname.'_neg.'.$_SESSION['fext'];
+	$outimg='../../images/'.$outfile;
 
 	$cmd='python34 negative.py "../../images/'.$_SESSION['fname'].'" "'.$outimg.'"';
 	$cout=shell_exec($cmd);
