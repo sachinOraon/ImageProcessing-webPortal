@@ -1,4 +1,8 @@
 <?php
+	session_start();
+	//function for displaying alert box
+	function alert($msg) { echo "<script type='text/javascript'>alert('$msg');</script>"; }
+
 	//for Image Smoothing -> Averaging
 	if(isset($_POST['blur_avg']))
 	{
@@ -20,5 +24,12 @@
 	{
 		$_SESSION['inp_varC']=$_POST['inp_varC'];
 		header("Location: filters/simple_int_trans/range_comp.php");
+	}
+
+	//for gamma transformation
+	if(isset($_POST['gamma_trans']))
+	{
+		$_SESSION['inp_varG']=$_POST['inp_varG'];
+		header("Location: filters/simple_int_trans/gamma.php");
 	}
 ?>
