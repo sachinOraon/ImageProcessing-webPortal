@@ -39,4 +39,11 @@
 		$_SESSION['inp_cf']=$_POST['inp_cfreq'];
 		header("Location: filters/spatial_filter/ideal_low_pass.php");
 	}
+
+	//for Gaussian low pass
+	if(isset($_POST['gauss_low_pass']))
+	{
+		$_SESSION['inp_cfg']=$_POST['inp_cfreqG'];
+		header("Location: filters/spatial_filter/gauss_low_pass.php");
+	}
 ?>

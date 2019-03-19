@@ -39,6 +39,7 @@
 			include 'filters/simple_int_trans/modal_range_comp.php';
 			include 'filters/simple_int_trans/modal_gamma.php';
 			include 'filters/spatial_filter/modal_ideal_low_pass.php';
+			include 'filters/spatial_filter/modal_gauss_low_pass.php';
 		?>
 		
 		<div class='row' id='row1'> <!-- ROW 1 BEGINS -->
@@ -49,8 +50,8 @@
 						<li><a href="filters/simple_int_trans/negative.php" onclick="document.getElementById('s3').style.display=''">Image Negatives</a><div class="spinner-grow text-warning" id='s3' style="display: none;"></div></li>
 						<li><a href="filters/simple_int_trans/cont_stretch_lin.php" onclick="document.getElementById('s4').style.display=''">Contrast Stretching [Linear]</a><div class="spinner-grow text-warning" id='s4' style="display: none;"></div></li>
 						<li><a href="filters/simple_int_trans/cont_stretch_nlin.php" onclick="document.getElementById('s5').style.display=''">Contrast Stretching [Non Linear]</a><div class="spinner-grow text-warning" id='s5' style="display: none;"></div></li>
-						<li><a href="#row3" data-toggle="modal" data-target="#range_comp">Range Compression</a></li>
-						<li><a href="#row3" data-toggle="modal" data-target="#gamma_trans">Gamma Transformation</a></li>
+						<li><a href="#" data-toggle="modal" data-target="#range_comp">Range Compression</a></li>
+						<li><a href="#" data-toggle="modal" data-target="#gamma_trans">Gamma Transformation</a></li>
 					</ul>
 				</div>
 			</div>
@@ -68,8 +69,8 @@
 				<div id="filter-box" class="zoomdiv" style='height: 340px; width: 400px;'>
 					<h2>Image Blurring</h2>
 					<ul>
-						<li><a href="#row1" data-toggle="modal" data-target="#blur_avg">Averaging</a></li>
-						<li><a href="#row1" data-toggle="modal" data-target="#blur_gauss">Gaussian Blurring</a></li>
+						<li><a href="#" data-toggle="modal" data-target="#blur_avg">Averaging</a></li>
+						<li><a href="#" data-toggle="modal" data-target="#blur_gauss">Gaussian Blurring</a></li>
 						<li><a href="filters/blur_php/blur_med.php">Median Blurring</a></li>
 						<li><a href="filters/blur_php/blur_bilat.php">Bilateral Filtering</a></li>
 					</ul>
@@ -82,7 +83,8 @@
 				<div id="filter-box" class="zoomdiv" style='height: 300px; width: 400px; margin-left: 40px;'>
 					<h2>Smoothing Frequency Domain</h2>
 					<ul>
-						<li><a href="#row3" data-toggle="modal" data-target="#ideal_low_pass">Ideal Low Pass Filter</a></li>
+						<li><a href="#" data-toggle="modal" data-target="#ideal_low_pass">Ideal Low Pass Filter</a></li>
+						<li><a href="#" data-toggle="modal" data-target="#gauss_low_pass">Gaussian Low Pass Filter</a></li>
 					</ul>
 				</div>
 			</div>
