@@ -32,4 +32,11 @@
 		$_SESSION['inp_varG']=$_POST['inp_varG'];
 		header("Location: filters/simple_int_trans/gamma.php");
 	}
+
+	//for smoothing ideal low pass
+	if(isset($_POST['ideal_low_pass']))
+	{
+		$_SESSION['inp_cf']=$_POST['inp_cfreq'];
+		header("Location: filters/spatial_filter/ideal_low_pass.php");
+	}
 ?>

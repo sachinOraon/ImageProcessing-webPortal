@@ -38,11 +38,34 @@
 			include 'filters/blur_php/gauss_modal.php';
 			include 'filters/simple_int_trans/modal_range_comp.php';
 			include 'filters/simple_int_trans/modal_gamma.php';
+			include 'filters/spatial_filter/modal_ideal_low_pass.php';
 		?>
 		
 		<div class='row' id='row1'> <!-- ROW 1 BEGINS -->
 			<div class='col-md-4'>
-				<div id="filter-box" class="zoomdiv" style='height: 340px; width: 400px; margin-left: 40px;'>
+				<div id="filter-box" class="zoomdiv" style='height: 400px; width: 400px; margin-left: 40px;'>
+					<h2>Simple intensity transformation</h2>
+					<ul>
+						<li><a href="filters/simple_int_trans/negative.php" onclick="document.getElementById('s3').style.display=''">Image Negatives</a><div class="spinner-grow text-warning" id='s3' style="display: none;"></div></li>
+						<li><a href="filters/simple_int_trans/cont_stretch_lin.php" onclick="document.getElementById('s4').style.display=''">Contrast Stretching [Linear]</a><div class="spinner-grow text-warning" id='s4' style="display: none;"></div></li>
+						<li><a href="filters/simple_int_trans/cont_stretch_nlin.php" onclick="document.getElementById('s5').style.display=''">Contrast Stretching [Non Linear]</a><div class="spinner-grow text-warning" id='s5' style="display: none;"></div></li>
+						<li><a href="#row3" data-toggle="modal" data-target="#range_comp">Range Compression</a></li>
+						<li><a href="#row3" data-toggle="modal" data-target="#gamma_trans">Gamma Transformation</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class='col-md-4'>
+				<div id="filter-box" class="zoomdiv" style='height: 270px; width: 400px;'>
+					<h2>Histograms</h2>
+					<ul>
+						<li><a href="filters/histogram_php/hist_col.php">Plot Histogram For Color Image</a></li>
+						<li><a href="filters/histogram_php/hist_gray.php">Plot Histogram For Grayscale Image</a></li>
+						<li><a href="filters/histogram_php/hist_gray_eq.php">Equalization For Grayscale Image</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class='col-md-4'>
+				<div id="filter-box" class="zoomdiv" style='height: 340px; width: 400px;'>
 					<h2>Image Blurring</h2>
 					<ul>
 						<li><a href="#row1" data-toggle="modal" data-target="#blur_avg">Averaging</a></li>
@@ -52,50 +75,14 @@
 					</ul>
 				</div>
 			</div>
-			<div class='col-md-4'>
-				<div id="filter-box" class="zoomdiv" style='width: 450px; height: 360px'>
-					<h2>Morphological Transformation</h2>
-					<div class="row">
-						<div class="col-sm-6">
-							<ul>
-								<li><a href="filters/morph_trans_php/erosion.php">Erosion</a></li>
-								<li><a href="filters/morph_trans_php/dilation.php">Dilation</a></li>
-								<li><a href="filters/morph_trans_php/open.php">Opening</a></li>
-								<li><a href="filters/morph_trans_php/close.php">Closing</a></li>
-							</ul>
-						</div>
-						<div class="col-sm-6">
-							<ul>
-								<li><a href="filters/morph_trans_php/grad.php">Morphological Gradient</a></li>
-								<li><a href="filters/morph_trans_php/that.php">Top Hat</a></li>
-								<li><a href="filters/morph_trans_php/bhat.php">Black Hat</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class='col-md-4'>
-				<div id="filter-box" class="zoomdiv" style='height: 360px; width: 400px;'>
-					<h2>Image Gradients</h2>
-					<ul>
-						<li><a href="filters/img_grad_php/lap.php">Laplacian Derivatives</a></li>
-						<li><a href="filters/img_grad_php/sobx.php">Sobel X</a></li>
-						<li><a href="filters/img_grad_php/soby.php">Sobel Y</a></li>
-						<li><a href="filters/canny_php/canny.php">Canny Edge Detection</a></li>
-						<li><a href="filters/img_grad_php/prewitt_grad.php" onclick="document.getElementById('s6').style.display=''">Prewitt Filter </a><div class="spinner-grow text-warning" id='s6' style="display: none;"></div></li>
-					</ul>
-				</div>
-			</div>
 		</div> <!-- ROW 1 ENDS -->
 
 		<div class="row" id='row2'> <!-- ROW 2 BEGINS-->
 			<div class='col-md-4'>
-				<div id="filter-box" class="zoomdiv" style='height: 270px; width: 400px; margin-left: 40px;'>
-					<h2>Histograms</h2>
+				<div id="filter-box" class="zoomdiv" style='height: 300px; width: 400px; margin-left: 40px;'>
+					<h2>Smoothing Frequency Domain</h2>
 					<ul>
-						<li><a href="filters/histogram_php/hist_col.php">Plot Histogram For Color Image</a></li>
-						<li><a href="filters/histogram_php/hist_gray.php">Plot Histogram For Grayscale Image</a></li>
-						<li><a href="filters/histogram_php/hist_gray_eq.php">Equalization For Grayscale Image</a></li>
+						<li><a href="#row3" data-toggle="modal" data-target="#ideal_low_pass">Ideal Low Pass Filter</a></li>
 					</ul>
 				</div>
 			</div>
@@ -144,15 +131,37 @@
 				</div>
 			</div>
 			<div class='col-md-4'>
-				<div id="filter-box" class="zoomdiv" style='height: 400px; width: 400px;'>
-					<h2>Simple intensity transformation</h2>
+				<div id="filter-box" class="zoomdiv" style='height: 360px; width: 400px;'>
+					<h2>Image Gradients</h2>
 					<ul>
-						<li><a href="filters/simple_int_trans/negative.php" onclick="document.getElementById('s3').style.display=''">Image Negatives</a><div class="spinner-grow text-warning" id='s3' style="display: none;"></div></li>
-						<li><a href="filters/simple_int_trans/cont_stretch_lin.php" onclick="document.getElementById('s4').style.display=''">Contrast Stretching [Linear]</a><div class="spinner-grow text-warning" id='s4' style="display: none;"></div></li>
-						<li><a href="filters/simple_int_trans/cont_stretch_nlin.php" onclick="document.getElementById('s5').style.display=''">Contrast Stretching [Non Linear]</a><div class="spinner-grow text-warning" id='s5' style="display: none;"></div></li>
-						<li><a href="#row3" data-toggle="modal" data-target="#range_comp">Range Compression</a></li>
-						<li><a href="#row3" data-toggle="modal" data-target="#gamma_trans">Gamma Transformation</a></li>
+						<li><a href="filters/img_grad_php/lap.php">Laplacian Derivatives</a></li>
+						<li><a href="filters/img_grad_php/sobx.php">Sobel X</a></li>
+						<li><a href="filters/img_grad_php/soby.php">Sobel Y</a></li>
+						<li><a href="filters/canny_php/canny.php">Canny Edge Detection</a></li>
+						<li><a href="filters/img_grad_php/prewitt_grad.php" onclick="document.getElementById('s6').style.display=''">Prewitt Filter </a><div class="spinner-grow text-warning" id='s6' style="display: none;"></div></li>
 					</ul>
+				</div>
+			</div>
+			<div class='col-md-4'>
+				<div id="filter-box" class="zoomdiv" style='width: 450px; height: 360px'>
+					<h2>Morphological Transformation</h2>
+					<div class="row">
+						<div class="col-sm-6">
+							<ul>
+								<li><a href="filters/morph_trans_php/erosion.php">Erosion</a></li>
+								<li><a href="filters/morph_trans_php/dilation.php">Dilation</a></li>
+								<li><a href="filters/morph_trans_php/open.php">Opening</a></li>
+								<li><a href="filters/morph_trans_php/close.php">Closing</a></li>
+							</ul>
+						</div>
+						<div class="col-sm-6">
+							<ul>
+								<li><a href="filters/morph_trans_php/grad.php">Morphological Gradient</a></li>
+								<li><a href="filters/morph_trans_php/that.php">Top Hat</a></li>
+								<li><a href="filters/morph_trans_php/bhat.php">Black Hat</a></li>
+							</ul>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div> <!-- ROW 3 ENDS -->

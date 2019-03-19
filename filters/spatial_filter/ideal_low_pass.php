@@ -2,17 +2,17 @@
 	session_start();
 	$tmp = explode('.'.$_SESSION['fext'], $_SESSION['fname'], -1);
 	$tmpname=current($tmp);
-	$outfile=$tmpname.'_range_comp.'.$_SESSION['fext'];
+	$outfile=$tmpname.'_ilp.'.$_SESSION['fext'];
 	$outimg='../../images/'.$outfile;
 
-	$cmd='python34 range_comp.py "../../images/'.$_SESSION['fname'].'" "'.$outimg.'" '.$_SESSION['inp_varC'];
+	$cmd='python34 ideal_low_pass.py "../../images/'.$_SESSION['fname'].'" "'.$outimg.'" '.$_SESSION['inp_cf'];
 	$cout=shell_exec($cmd);
 
 	if(!(strcasecmp($cout,'failed')==0))
 	{
 		//set session variables for use in display.php
-		$_SESSION['title']='Simple Intensity Transformation';
-		$_SESSION['filter']='After Range Compression [c = '.$_SESSION['inp_varC'].']';
+		$_SESSION['title']='Smoothing Frequency Domain';
+		$_SESSION['filter']='Ideal Low Pass Filter [D<sub>0</sub> = '.$_SESSION['inp_cf'].']';
 		$_SESSION['outimg']='images/'.$outfile;
 		
 		//call display.php

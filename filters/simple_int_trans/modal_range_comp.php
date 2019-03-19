@@ -12,7 +12,6 @@
 			<div class="modal-body">
 				<p>Compression of Dynamic Range is applied through Log Transformation. The general form is as follows -</p>
 				<div class="alert alert-info"><code><var>x</var> = <var>c * log</var><sub>10</sub>(1 + <var>r</var>)</code></div>
-				<div class="alert alert-success">Specify the range for <var>c</var></div>
 				<?php
 					if(isset($_SESSION['fname']))
 					{
@@ -29,7 +28,7 @@
 						echo '<form action="filters.php" method="POST" style="display:none;">';
 					}
 				?>
-					<label><strong>c : <span id="spn_varC">5</span></strong></label>
+					<div class="alert alert-success">Specify the value for <strong>c : <span id="spn_varC">5</span></strong></div>
 					<input type="range" class="custom-range" id="inp_varC" name="inp_varC" value="5" min="1" max="100" step="0.1">
 					<!-- Javascript to show range values -->
 					<script>
