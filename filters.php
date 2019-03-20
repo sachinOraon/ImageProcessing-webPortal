@@ -38,9 +38,9 @@
 			include 'filters/blur_php/gauss_modal.php';
 			include 'filters/simple_int_trans/modal_range_comp.php';
 			include 'filters/simple_int_trans/modal_gamma.php';
-			include 'filters/spatial_filter/modal_ideal_low_pass.php';
-			include 'filters/spatial_filter/modal_gauss_low_pass.php';
-			include 'filters/spatial_filter/modal_ideal_high_pass.php';
+			include 'filters/freq_domain_filters/modal_ideal_low_pass.php';
+			include 'filters/freq_domain_filters/modal_gauss_low_pass.php';
+			include 'filters/freq_domain_filters/modal_ideal_high_pass.php';
 		?>
 		
 		<div class='row' id='row1'> <!-- ROW 1 BEGINS -->

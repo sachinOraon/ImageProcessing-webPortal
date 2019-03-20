@@ -12,7 +12,7 @@
 			<div class="modal-body">
 				<p>It cuts off all high frequency components that are a specified distance D<sub>0</sub> from the origin of the transform. Changing the distance changes the behaviour of the filter.
 				The lowpass filters are radially symmetric about the origin. A high-pass filter can be obtained from a low-pass filter using :</p>
-				<img src='filters/spatial_filter/ideal_high_pass.png' class="rounded mx-auto d-block"><br>
+				<img src='filters/freq_domain_filters/ideal_high_pass.png' class="rounded mx-auto d-block"><br>
 				<?php
 					if(isset($_SESSION['fname']))
 					{

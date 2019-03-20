@@ -10,7 +10,7 @@
         
 			<!-- Modal body -->
 			<div class="modal-body">
-				<p>2D Gaussian Low Pass Filter is given by :</p><img src='filters/spatial_filter/gauss_low_pass.png' class="rounded mx-auto d-block"><br><p>where <b>D<sub>0</sub></b> is the cutoff frequency.</p>
+				<p>2D Gaussian Low Pass Filter is given by :</p><img src='filters/freq_domain_filters/gauss_low_pass.png' class="rounded mx-auto d-block"><br><p>where <b>D<sub>0</sub></b> is the cutoff frequency.</p>
 				<?php
 					if(isset($_SESSION['fname']))
 					{

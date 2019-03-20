@@ -11,7 +11,7 @@
 			<!-- Modal body -->
 			<div class="modal-body">
 				<p>Compression of Dynamic Range is applied through Log Transformation. The general form is as follows -</p>
-				<div class="alert alert-info"><code><var>x</var> = <var>c * log</var><sub>10</sub>(1 + <var>r</var>)</code></div>
+				<div class="alert alert-info text-center"><code><var>x</var> = <var>c * log</var><sub>10</sub>(1 + <var>r</var>)</code></div>
 				<?php
 					if(isset($_SESSION['fname']))
 					{

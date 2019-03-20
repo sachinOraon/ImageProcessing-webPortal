@@ -37,20 +37,20 @@
 	if(isset($_POST['ideal_low_pass']))
 	{
 		$_SESSION['inp_cf']=$_POST['inp_cfreq'];
-		header("Location: filters/spatial_filter/ideal_low_pass.php");
+		header("Location: filters/freq_domain_filters/ideal_low_pass.php");
 	}
 
 	//for Gaussian low pass
 	if(isset($_POST['gauss_low_pass']))
 	{
 		$_SESSION['inp_cfg']=$_POST['inp_cfreqG'];
-		header("Location: filters/spatial_filter/gauss_low_pass.php");
+		header("Location: filters/freq_domain_filters/gauss_low_pass.php");
 	}
 
 	//for ideal high pass
 	if(isset($_POST['ideal_high_pass']))
 	{
 		$_SESSION['inp_ihpcf']=$_POST['inp_ihpcf'];
-		header("Location: filters/spatial_filter/ideal_high_pass.php");
+		header("Location: filters/freq_domain_filters/ideal_high_pass.php");
 	}
 ?>
