@@ -42,6 +42,7 @@
 			include 'filters/freq_domain_filters/modal_gauss_low_pass.php';
 			include 'filters/freq_domain_filters/modal_ideal_high_pass.php';
 			include 'filters/freq_domain_filters/modal_gauss_high_pass.php';
+			include 'filters/freq_domain_filters/modal_bw_low_pass.php';
 		?>
 		
 		<div class='row' id='row1'> <!-- ROW 1 BEGINS -->
@@ -86,6 +87,7 @@
 					<h2>Smoothing Frequency Domain Filters</h2>
 					<ul>
 						<li><a href="#" data-toggle="modal" data-target="#ideal_low_pass">Ideal Low Pass Filter</a></li>
+						<li><a href="#" data-toggle="modal" data-target="#bw_low_pass">Butterworth Low Pass Filter</a></li>
 						<li><a href="#" data-toggle="modal" data-target="#gauss_low_pass">Gaussian Low Pass Filter</a></li>
 					</ul>
 				</div>

@@ -60,4 +60,12 @@
 		$_SESSION['inp_ghpcf']=$_POST['inp_ghpcf'];
 		header("Location: filters/freq_domain_filters/gauss_high_pass.php");
 	}
+
+	//for Butterworth low pass
+	if(isset($_POST['bw_low_pass']))
+	{
+		$_SESSION['inp_cfblp']=$_POST['inp_cfblp'];
+		$_SESSION['inp_oblp']=$_POST['inp_oblp'];
+		header("Location: filters/freq_domain_filters/bw_low_pass.php");
+	}
 ?>
