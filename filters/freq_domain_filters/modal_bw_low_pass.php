@@ -61,4 +61,4 @@
 		</div>
     </div>
 </div>
-<!-- Ideal low pass Modal Ends -->
+<!-- Butterworth low pass Modal Ends -->

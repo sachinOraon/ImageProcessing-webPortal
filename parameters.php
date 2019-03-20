@@ -68,4 +68,12 @@
 		$_SESSION['inp_oblp']=$_POST['inp_oblp'];
 		header("Location: filters/freq_domain_filters/bw_low_pass.php");
 	}
+
+	//for Butterworth high pass
+	if(isset($_POST['bw_high_pass']))
+	{
+		$_SESSION['inp_cfbhp']=$_POST['inp_cfbhp'];
+		$_SESSION['inp_obhp']=$_POST['inp_obhp'];
+		header("Location: filters/freq_domain_filters/bw_high_pass.php");
+	}
 ?>

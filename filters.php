@@ -43,6 +43,7 @@
 			include 'filters/freq_domain_filters/modal_ideal_high_pass.php';
 			include 'filters/freq_domain_filters/modal_gauss_high_pass.php';
 			include 'filters/freq_domain_filters/modal_bw_low_pass.php';
+			include 'filters/freq_domain_filters/modal_bw_high_pass.php';
 		?>
 		
 		<div class='row' id='row1'> <!-- ROW 1 BEGINS -->
@@ -97,6 +98,7 @@
 					<h2>Sharpening Frequency Domain Filters</h2>
 					<ul>
 						<li><a href="#" data-toggle="modal" data-target="#ideal_high_pass">Ideal High Pass Filter</a></li>
+						<li><a href="#" data-toggle="modal" data-target="#bw_high_pass">Butterworth High Pass Filter</a></li>
 						<li><a href="#" data-toggle="modal" data-target="#gauss_high_pass">Gaussian High Pass Filter</a></li>
 					</ul>
 				</div>
