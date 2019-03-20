@@ -20,9 +20,10 @@ function flag=ideal_low_pass(img, outimg, cfreq)
 	D=sqrt(U.^2+V.^2);
 	D0=cfreq; %cutoff frequency
 	
-	%Applying the Gaussian low pass
+	%Applying the Gaussian high pass pass
 	Hg = ifftshift(exp(-(D.^2)./(2*(D0^2))));
-	g=real(ifft2(Hg.*F_u_v));
+	ghp=1-Hg;
+	g=real(ifft2(ghp.*F_u_v));
 	
 	%saving file
 	out=uint8(abs(g));

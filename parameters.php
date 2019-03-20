@@ -53,4 +53,11 @@
 		$_SESSION['inp_ihpcf']=$_POST['inp_ihpcf'];
 		header("Location: filters/freq_domain_filters/ideal_high_pass.php");
 	}
+
+	//for Gaussian high pass
+	if(isset($_POST['gauss_high_pass']))
+	{
+		$_SESSION['inp_ghpcf']=$_POST['inp_ghpcf'];
+		header("Location: filters/freq_domain_filters/gauss_high_pass.php");
+	}
 ?>
