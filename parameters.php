@@ -46,4 +46,11 @@
 		$_SESSION['inp_cfg']=$_POST['inp_cfreqG'];
 		header("Location: filters/spatial_filter/gauss_low_pass.php");
 	}
+
+	//for ideal high pass
+	if(isset($_POST['ideal_high_pass']))
+	{
+		$_SESSION['inp_ihpcf']=$_POST['inp_ihpcf'];
+		header("Location: filters/spatial_filter/ideal_high_pass.php");
+	}
 ?>

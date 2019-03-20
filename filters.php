@@ -40,6 +40,7 @@
 			include 'filters/simple_int_trans/modal_gamma.php';
 			include 'filters/spatial_filter/modal_ideal_low_pass.php';
 			include 'filters/spatial_filter/modal_gauss_low_pass.php';
+			include 'filters/spatial_filter/modal_ideal_high_pass.php';
 		?>
 		
 		<div class='row' id='row1'> <!-- ROW 1 BEGINS -->
@@ -77,14 +78,22 @@
 				</div>
 			</div>
 		</div> <!-- ROW 1 ENDS -->
-
-		<div class="row" id='row2'> <!-- ROW 2 BEGINS-->
+		<!-- ROW 2 BEGINS-->
+		<div class="row" id='row2'>
 			<div class='col-md-4'>
 				<div id="filter-box" class="zoomdiv" style='height: 300px; width: 400px; margin-left: 40px;'>
-					<h2>Smoothing Frequency Domain</h2>
+					<h2>Smoothing Frequency Domain Filters</h2>
 					<ul>
 						<li><a href="#" data-toggle="modal" data-target="#ideal_low_pass">Ideal Low Pass Filter</a></li>
 						<li><a href="#" data-toggle="modal" data-target="#gauss_low_pass">Gaussian Low Pass Filter</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class='col-md-4'>
+				<div id="filter-box" class="zoomdiv" style='height: 300px; width: 400px;'>
+					<h2>Sharpening Frequency Domain Filters</h2>
+					<ul>
+						<li><a href="#" data-toggle="modal" data-target="#ideal_high_pass">Ideal High Pass Filter</a></li>
 					</ul>
 				</div>
 			</div>
@@ -103,8 +112,11 @@
 					</ul>
 				</div>
 			</div>
+		</div> <!-- ROW 2 ENDS -->
+		<!-- ROW 3 BEGINS-->
+		<div class="row" id='row3'>
 			<div class="col-md-4">
-				<div id="filter-box" class="zoomdiv" style='height: 420px; width: 400px;'>
+				<div id="filter-box" class="zoomdiv" style='height: 420px; width: 400px; margin-left: 40px;'>
 					<h2>Image Thresholding</h2>
 					<ul>
 						<li><a href="#">Adaptive Thresholding</a></li>
@@ -120,11 +132,8 @@
 					</ul>
 				</div>
 			</div>
-		</div> <!-- ROW 2 ENDS -->
-		
-		<div class="row" id='row3'> <!-- ROW 3 BEGINS-->
 			<div class='col-md-4'>
-				<div id="filter-box" class="zoomdiv" style='height: 250px; width: 400px; margin-left: 40px;'>
+				<div id="filter-box" class="zoomdiv" style='height: 250px; width: 400px;'>
 					<h2>Gaussian Noise Reduction</h2>
 					<ul>
 						<li><a href="filters/noise_reduc_php/noise_reduc.php" onclick="document.getElementById('s1').style.display=''">Noise Reduction</a><div class="spinner-grow text-warning" id='s1' style="display: none;"></div></li>
@@ -144,8 +153,11 @@
 					</ul>
 				</div>
 			</div>
+		</div> <!-- ROW 3 ENDS -->
+		<!-- ROW 4 BEGINS-->
+		<div class="row" id='row4'>
 			<div class='col-md-4'>
-				<div id="filter-box" class="zoomdiv" style='width: 450px; height: 360px'>
+				<div id="filter-box" class="zoomdiv" style='width: 420px; height: 360px; margin-left: 40px;'>
 					<h2>Morphological Transformation</h2>
 					<div class="row">
 						<div class="col-sm-6">
@@ -166,7 +178,7 @@
 					</div>
 				</div>
 			</div>
-		</div> <!-- ROW 3 ENDS -->
+		</div> <!-- ROW 4 ENDS-->
 
 	</div> <!-- CONATINER DIV ENDS -->
 	
