@@ -23,7 +23,7 @@
 		<p class="py-5 text-center"></p>
 		<div class="navbar">
 			<h2 class="animated fadeInLeft" style="color: white;">Image Processing</h2>
-			<a class="animated fadeInRight hoverable peach-gradient waves-effect" style="margin-left: 60%;border-radius: 50%" href="#home"><i class="fas fa-home"></i></a>
+			<a class="animated fadeInRight hoverable near-moon-gradient waves-effect" style="margin-left: 60%;border-radius: 50%" href="#home"><i class="fas fa-home"></i></a>
 			<a class="animated fadeInRight hoverable purple-gradient waves-effect" href="#filters" style="border-radius: 48%"><i class="fas fa-filter"></i></a>
 			<a class="animated fadeInRight hoverable blue-gradient waves-effect" style="border-radius: 48%" href="#contact"><i class="fas fa-phone"></i></a>
 		</div>
@@ -35,8 +35,13 @@
 			</div>
 	  	
 			<form style="margin-left: 510px; margin-top: 10%" action="upload.php" method="POST" enctype="multipart/form-data">
-				<label><input id="choose" class="btn peach-gradient hoverable waves-effect" type="file" name="file"></label>
-				<button class="btn peach-gradient waves-effect hoverable" type="submit" name="upload"><i class="fas fa-arrow-alt-circle-up"></i>&nbsp;UPLOAD</button><br>
+				<div class="row no-gutters">
+					<div class="col-md-6 custom-file">
+						<input type="file" class="custom-file-input" id="customFile" name="file">
+						<label class="custom-file-label" for="customFile">Choose file</label>
+					</div>
+				</div>
+				<button style="margin-left:17%" class="btn morpheus-den-gradient waves-effect hoverable" type="submit" name="upload"><i class="fas fa-arrow-alt-circle-up"></i>&nbsp;UPLOAD</button>
 				<?php
 					session_start();
 					if(isset($_SESSION['err']))
@@ -51,13 +56,20 @@
 							$msg='Invalid file selected !';
 						if($_SESSION['err']==5)
 							$msg='Please select a file first !';
-						echo '<label><div class="alert alert-danger alert-dismissible fade show">
+						echo '<div class="row"><div style="margin-left:10%" class="text-center col-md-4 alert alert-danger alert-dismissible fade show">
 							<button type="button" class="close" data-dismiss="alert">&times;</button>
-							<strong>'.$msg.'</strong></div></label>';
+							<strong>'.$msg.'</strong></div></div>';
 						unset($_SESSION['err']);
 					}
 				?>
 			</form>
+			<script>
+				// To show the name of file choosen
+				$(".custom-file-input").on("change", function() {
+					var fileName = $(this).val().split("\\").pop();
+					$(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+				});
+			</script>
 		</div>
 		<footer style="margin-top: 30%;" class="page-footer font-small elegant-color">
 
