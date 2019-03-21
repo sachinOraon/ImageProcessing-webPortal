@@ -52,11 +52,11 @@
 				<div id="filter-box" class="zoomdiv" style='height: 400px; width: 400px; margin-left: 40px;'>
 					<h2>Simple intensity transformation</h2>
 					<ul>
-						<li><a href="filters/simple_int_trans/negative.php" onclick="document.getElementById('s3').style.display=''">Image Negatives</a><div class="spinner-grow text-warning" id='s3' style="display: none;"></div></li>
-						<li><a href="filters/simple_int_trans/cont_stretch_lin.php" onclick="document.getElementById('s4').style.display=''">Contrast Stretching [Linear]</a><div class="spinner-grow text-warning" id='s4' style="display: none;"></div></li>
-						<li><a href="filters/simple_int_trans/cont_stretch_nlin.php" onclick="document.getElementById('s5').style.display=''">Contrast Stretching [Non Linear]</a><div class="spinner-grow text-warning" id='s5' style="display: none;"></div></li>
-						<li><a href="#" data-toggle="modal" data-target="#range_comp">Range Compression</a></li>
-						<li><a href="#" data-toggle="modal" data-target="#gamma_trans">Gamma Transformation</a></li>
+						<li class="waves-effect"><a href="filters/simple_int_trans/negative.php" onclick="document.getElementById('s3').style.display=''">Image Negatives</a><div class="spinner-grow text-warning" id='s3' style="display: none;"></div></li>
+						<li class="waves-effect"><a href="filters/simple_int_trans/cont_stretch_lin.php" onclick="document.getElementById('s4').style.display=''">Contrast Stretching [Linear]</a><div class="spinner-grow text-warning" id='s4' style="display: none;"></div></li>
+						<li class="waves-effect"><a href="filters/simple_int_trans/cont_stretch_nlin.php" onclick="document.getElementById('s5').style.display=''">Contrast Stretching [Non Linear]</a><div class="spinner-grow text-warning" id='s5' style="display: none;"></div></li>
+						<li class="waves-effect"><a href="#" data-toggle="modal" data-target="#range_comp">Range Compression</a></li>
+						<li class="waves-effect"><a href="#" data-toggle="modal" data-target="#gamma_trans">Gamma Transformation</a></li>
 					</ul>
 				</div>
 			</div>
@@ -64,9 +64,9 @@
 				<div id="filter-box" class="zoomdiv" style='height: 270px; width: 400px;'>
 					<h2>Histograms</h2>
 					<ul>
-						<li><a href="filters/histogram_php/hist_col.php">Plot Histogram For Color Image</a></li>
-						<li><a href="filters/histogram_php/hist_gray.php">Plot Histogram For Grayscale Image</a></li>
-						<li><a href="filters/histogram_php/hist_gray_eq.php">Equalization For Grayscale Image</a></li>
+						<li class="waves-effect"><a href="filters/histogram_php/hist_col.php">Plot Histogram For Color Image</a></li>
+						<li class="waves-effect"><a href="filters/histogram_php/hist_gray.php">Plot Histogram For Grayscale Image</a></li>
+						<li class="waves-effect"><a href="filters/histogram_php/hist_gray_eq.php">Equalization For Grayscale Image</a></li>
 					</ul>
 				</div>
 			</div>
@@ -74,10 +74,10 @@
 				<div id="filter-box" class="zoomdiv" style='height: 340px; width: 400px;'>
 					<h2>Image Blurring</h2>
 					<ul>
-						<li><a href="#" data-toggle="modal" data-target="#blur_avg">Averaging</a></li>
-						<li><a href="#" data-toggle="modal" data-target="#blur_gauss">Gaussian Blurring</a></li>
-						<li><a href="filters/blur_php/blur_med.php">Median Blurring</a></li>
-						<li><a href="filters/blur_php/blur_bilat.php">Bilateral Filtering</a></li>
+						<li class="waves-effect"><a href="#" data-toggle="modal" data-target="#blur_avg">Averaging</a></li>
+						<li class="waves-effect"><a href="#" data-toggle="modal" data-target="#blur_gauss">Gaussian Blurring</a></li>
+						<li class="waves-effect"><a href="filters/blur_php/blur_med.php">Median Blurring</a></li>
+						<li class="waves-effect"><a href="filters/blur_php/blur_bilat.php">Bilateral Filtering</a></li>
 					</ul>
 				</div>
 			</div>
@@ -88,9 +88,9 @@
 				<div id="filter-box" class="zoomdiv" style='height: 300px; width: 400px; margin-left: 40px;'>
 					<h2>Smoothing Frequency Domain Filters</h2>
 					<ul>
-						<li><a href="#" data-toggle="modal" data-target="#ideal_low_pass">Ideal Low Pass Filter</a></li>
-						<li><a href="#" data-toggle="modal" data-target="#bw_low_pass">Butterworth Low Pass Filter</a></li>
-						<li><a href="#" data-toggle="modal" data-target="#gauss_low_pass">Gaussian Low Pass Filter</a></li>
+						<li class="waves-effect"><a href="#" data-toggle="modal" data-target="#ideal_low_pass">Ideal Low Pass Filter</a></li>
+						<li class="waves-effect"><a href="#" data-toggle="modal" data-target="#bw_low_pass">Butterworth Low Pass Filter</a></li>
+						<li class="waves-effect"><a href="#" data-toggle="modal" data-target="#gauss_low_pass">Gaussian Low Pass Filter</a></li>
 					</ul>
 				</div>
 			</div>
@@ -98,10 +98,10 @@
 				<div id="filter-box" class="zoomdiv" style='height: 350px; width: 400px;'>
 					<h2>Sharpening Frequency Domain Filters</h2>
 					<ul>
-						<li><a href="#" data-toggle="modal" data-target="#ideal_high_pass">Ideal High Pass Filter</a></li>
-						<li><a href="#" data-toggle="modal" data-target="#bw_high_pass">Butterworth High Pass Filter</a></li>
-						<li><a href="#" data-toggle="modal" data-target="#gauss_high_pass">Gaussian High Pass Filter</a></li>
-						<li><a href="#" data-toggle="modal" data-target="#homo_fil">Homomorphic Filtering</a></li>
+						<li class="waves-effect"><a href="#" data-toggle="modal" data-target="#ideal_high_pass">Ideal High Pass Filter</a></li>
+						<li class="waves-effect"><a href="#" data-toggle="modal" data-target="#bw_high_pass">Butterworth High Pass Filter</a></li>
+						<li class="waves-effect"><a href="#" data-toggle="modal" data-target="#gauss_high_pass">Gaussian High Pass Filter</a></li>
+						<li class="waves-effect"><a href="#" data-toggle="modal" data-target="#homo_fil">Homomorphic Filtering</a></li>
 					</ul>
 				</div>
 			</div>
@@ -109,13 +109,13 @@
 				<div id="filter-box" class="zoomdiv" style='height: 420px; width: 400px;'>
 					<h2>Image Thresholding</h2>
 					<ul>
-						<li><a href="#">Simple Thresholding</a></li>
+						<li class="waves-effect"><a href="#">Simple Thresholding</a></li>
 						<ul>
-							<li><a href="filters/img_thres_php/simple/bin.php">&bull; Threshold Binary</a></li>
-							<li><a href="filters/img_thres_php/simple/bin_inv.php">&bull; Threshold Binary Inverted</a></li>
-							<li><a href="filters/img_thres_php/simple/trunc.php">&bull; Truncate</a></li>
-							<li><a href="filters/img_thres_php/simple/tozero.php">&bull; Threshold to Zero</a></li>
-							<li><a href="filters/img_thres_php/simple/tz_inv.php">&bull; Threshold to Zero Inverted</a></li>
+							<li class="waves-effect"><a href="filters/img_thres_php/simple/bin.php">&bull; Threshold Binary</a></li>
+							<li class="waves-effect"><a href="filters/img_thres_php/simple/bin_inv.php">&bull; Threshold Binary Inverted</a></li>
+							<li class="waves-effect"><a href="filters/img_thres_php/simple/trunc.php">&bull; Truncate</a></li>
+							<li class="waves-effect"><a href="filters/img_thres_php/simple/tozero.php">&bull; Threshold to Zero</a></li>
+							<li class="waves-effect"><a href="filters/img_thres_php/simple/tz_inv.php">&bull; Threshold to Zero Inverted</a></li>
 						</ul>
 					</ul>
 				</div>
@@ -127,15 +127,15 @@
 				<div id="filter-box" class="zoomdiv" style='height: 420px; width: 400px; margin-left: 40px;'>
 					<h2>Image Thresholding</h2>
 					<ul>
-						<li><a href="#">Adaptive Thresholding</a></li>
+						<li class="waves-effect"><a href="#">Adaptive Thresholding</a></li>
 						<ul>
-							<li><a href="filters/img_thres_php/adaptive/mean.php">&bull; Mean</a></li>
-							<li><a href="filters/img_thres_php/adaptive/gauss.php">&bull; Gaussian</a></li>
+							<li class="waves-effect"><a href="filters/img_thres_php/adaptive/mean.php">&bull; Mean</a></li>
+							<li class="waves-effect"><a href="filters/img_thres_php/adaptive/gauss.php">&bull; Gaussian</a></li>
 						</ul>
-						<li><a href="#">Otsu&rsquo;s Binarization</a></li>
+						<li class="waves-effect"><a href="#">Otsu&rsquo;s Binarization</a></li>
 						<ul>
-							<li><a href="filters/img_thres_php/otsu/otsu.php">&bull; Otsu&rsquo;s Thresholding</a></li>
-							<li><a href="filters/img_thres_php/otsu/otsu_gaus.php">&bull; After Gaussian Filtering</a></li>
+							<li class="waves-effect"><a href="filters/img_thres_php/otsu/otsu.php">&bull; Otsu&rsquo;s Thresholding</a></li>
+							<li class="waves-effect"><a href="filters/img_thres_php/otsu/otsu_gaus.php">&bull; After Gaussian Filtering</a></li>
 						</ul>
 					</ul>
 				</div>
@@ -144,8 +144,8 @@
 				<div id="filter-box" class="zoomdiv" style='height: 250px; width: 400px;'>
 					<h2>Gaussian Noise Reduction</h2>
 					<ul>
-						<li><a href="filters/noise_reduc_php/noise_reduc.php" onclick="document.getElementById('s1').style.display=''">Noise Reduction</a><div class="spinner-grow text-warning" id='s1' style="display: none;"></div></li>
-						<li><div class="spinner-grow text-warning" id='s2' style="display: none;"></div><a href="filters/noise_reduc_php/noise_reduc_bw.php" onclick="document.getElementById('s2').style.display=''">Noise Reduction For Grayscale Image</a></li>
+						<li class="waves-effect"><a href="filters/noise_reduc_php/noise_reduc.php" onclick="document.getElementById('s1').style.display=''">Noise Reduction</a><div class="spinner-grow text-warning" id='s1' style="display: none;"></div></li>
+						<li class="waves-effect"><div class="spinner-grow text-warning" id='s2' style="display: none;"></div><a href="filters/noise_reduc_php/noise_reduc_bw.php" onclick="document.getElementById('s2').style.display=''">Noise Reduction For Grayscale Image</a></li>
 					</ul>
 				</div>
 			</div>
@@ -153,11 +153,11 @@
 				<div id="filter-box" class="zoomdiv" style='height: 360px; width: 400px;'>
 					<h2>Image Gradients</h2>
 					<ul>
-						<li><a href="filters/img_grad_php/lap.php">Laplacian Derivatives</a></li>
-						<li><a href="filters/img_grad_php/sobx.php">Sobel X</a></li>
-						<li><a href="filters/img_grad_php/soby.php">Sobel Y</a></li>
-						<li><a href="filters/canny_php/canny.php">Canny Edge Detection</a></li>
-						<li><a href="filters/img_grad_php/prewitt_grad.php" onclick="document.getElementById('s6').style.display=''">Prewitt Filter </a><div class="spinner-grow text-warning" id='s6' style="display: none;"></div></li>
+						<li class="waves-effect"><a href="filters/img_grad_php/lap.php">Laplacian Derivatives</a></li>
+						<li class="waves-effect"><a href="filters/img_grad_php/sobx.php">Sobel X</a></li>
+						<li class="waves-effect"><a href="filters/img_grad_php/soby.php">Sobel Y</a></li>
+						<li class="waves-effect"><a href="filters/canny_php/canny.php">Canny Edge Detection</a></li>
+						<li class="waves-effect"><a href="filters/img_grad_php/prewitt_grad.php" onclick="document.getElementById('s6').style.display=''">Prewitt Filter </a><div class="spinner-grow text-warning" id='s6' style="display: none;"></div></li>
 					</ul>
 				</div>
 			</div>
@@ -170,17 +170,17 @@
 					<div class="row">
 						<div class="col-sm-6">
 							<ul>
-								<li><a href="filters/morph_trans_php/erosion.php">Erosion</a></li>
-								<li><a href="filters/morph_trans_php/dilation.php">Dilation</a></li>
-								<li><a href="filters/morph_trans_php/open.php">Opening</a></li>
-								<li><a href="filters/morph_trans_php/close.php">Closing</a></li>
+								<li class="waves-effect"><a href="filters/morph_trans_php/erosion.php">Erosion</a></li>
+								<li class="waves-effect"><a href="filters/morph_trans_php/dilation.php">Dilation</a></li>
+								<li class="waves-effect"><a href="filters/morph_trans_php/open.php">Opening</a></li>
+								<li class="waves-effect"><a href="filters/morph_trans_php/close.php">Closing</a></li>
 							</ul>
 						</div>
 						<div class="col-sm-6">
 							<ul>
-								<li><a href="filters/morph_trans_php/grad.php">Morphological Gradient</a></li>
-								<li><a href="filters/morph_trans_php/that.php">Top Hat</a></li>
-								<li><a href="filters/morph_trans_php/bhat.php">Black Hat</a></li>
+								<li class="waves-effect"><a href="filters/morph_trans_php/grad.php">Morphological Gradient</a></li>
+								<li class="waves-effect"><a href="filters/morph_trans_php/that.php">Top Hat</a></li>
+								<li class="waves-effect"><a href="filters/morph_trans_php/bhat.php">Black Hat</a></li>
 							</ul>
 						</div>
 					</div>
