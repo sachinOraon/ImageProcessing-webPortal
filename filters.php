@@ -44,6 +44,7 @@
 			include 'filters/freq_domain_filters/modal_gauss_high_pass.php';
 			include 'filters/freq_domain_filters/modal_bw_low_pass.php';
 			include 'filters/freq_domain_filters/modal_bw_high_pass.php';
+			include 'filters/freq_domain_filters/modal_homo.php';
 		?>
 		
 		<div class='row' id='row1'> <!-- ROW 1 BEGINS -->
@@ -94,12 +95,13 @@
 				</div>
 			</div>
 			<div class='col-md-4'>
-				<div id="filter-box" class="zoomdiv" style='height: 300px; width: 400px;'>
+				<div id="filter-box" class="zoomdiv" style='height: 350px; width: 400px;'>
 					<h2>Sharpening Frequency Domain Filters</h2>
 					<ul>
 						<li><a href="#" data-toggle="modal" data-target="#ideal_high_pass">Ideal High Pass Filter</a></li>
 						<li><a href="#" data-toggle="modal" data-target="#bw_high_pass">Butterworth High Pass Filter</a></li>
 						<li><a href="#" data-toggle="modal" data-target="#gauss_high_pass">Gaussian High Pass Filter</a></li>
+						<li><a href="#" data-toggle="modal" data-target="#homo_fil">Homomorphic Filtering</a></li>
 					</ul>
 				</div>
 			</div>

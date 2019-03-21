@@ -76,4 +76,11 @@
 		$_SESSION['inp_obhp']=$_POST['inp_obhp'];
 		header("Location: filters/freq_domain_filters/bw_high_pass.php");
 	}
+
+	//for homomorphic
+	if(isset($_POST['homo_fil']))
+	{
+		$_SESSION['inp_varcfh']=$_POST['inp_varcfh'];
+		header("Location: filters/freq_domain_filters/homo.php");
+	}
 ?>

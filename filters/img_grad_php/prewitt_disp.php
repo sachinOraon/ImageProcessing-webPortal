@@ -20,10 +20,10 @@
 <body>
 	<div class="container-fluid">
 		<div class="row img-box" style="margin:10px;">
-			<div class="col-md-10"><h2 class="text-center">Image Processing</h2></div>
-			<div class="col-md-2">
-				<a href="../../filters.php" class="btn peach-gradient waves-effect" role="button"><i class="fas fa-arrow-left"></i></a>
-				<a href="../../index.php" class="btn purple-gradient waves-effect" role="button"><i class="fas fa-home"></i></a>
+			<div class="col-md-9"><h2 class="text-center">Image Processing</h2></div>
+			<div class="col-md-3">
+				<a href="../../index.php" class="btn purple-gradient waves-effect float-right" role="button"><i class="fas fa-home"></i></a>
+				<a href="../../filters.php" class="btn peach-gradient waves-effect float-right" role="button"><i class="fas fa-arrow-left"></i></a>
 			</div>
 		</div><br><br>
 		<div class="row">
