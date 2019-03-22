@@ -47,7 +47,7 @@
 			include 'filters/freq_domain_filters/modal_homo.php';
 		?>
 		
-		<div class='row' id='row1'> <!-- ROW 1 BEGINS -->
+		<div class='row'> <!-- ROW 1 BEGINS -->
 			<div class='col-md-4'>
 				<div id="filter-box" class="zoomdiv" style='height: 400px; width: 400px; margin-left: 40px;'>
 					<h2>Simple intensity transformation</h2>
@@ -55,8 +55,8 @@
 						<li class="waves-effect"><a href="filters/simple_int_trans/negative.php">Image Negatives</a></li>
 						<li class="waves-effect"><a href="filters/simple_int_trans/cont_stretch_lin.php">Contrast Stretching [Linear]</a></li>
 						<li class="waves-effect"><a href="filters/simple_int_trans/cont_stretch_nlin.php">Contrast Stretching [Non Linear]</a></li>
-						<li class="waves-effect"><a href="#" data-toggle="modal" data-target="#range_comp">Range Compression</a></li>
-						<li class="waves-effect"><a href="#" data-toggle="modal" data-target="#gamma_trans">Gamma Transformation</a></li>
+						<li class="waves-effect"><a data-toggle="modal" href="#range_comp">Range Compression</a></li>
+						<li class="waves-effect"><a data-toggle="modal" href="#gamma_trans">Gamma Transformation</a></li>
 					</ul>
 				</div>
 			</div>
@@ -74,8 +74,8 @@
 				<div id="filter-box" class="zoomdiv" style='height: 340px; width: 400px;'>
 					<h2>Image Blurring</h2>
 					<ul>
-						<li class="waves-effect"><a href="#" data-toggle="modal" data-target="#blur_avg">Averaging</a></li>
-						<li class="waves-effect"><a href="#" data-toggle="modal" data-target="#blur_gauss">Gaussian Blurring</a></li>
+						<li class="waves-effect"><a href="#blur_avg" data-toggle="modal">Averaging</a></li>
+						<li class="waves-effect"><a href="#blur_gauss" data-toggle="modal">Gaussian Blurring</a></li>
 						<li class="waves-effect"><a href="filters/blur_php/blur_med.php">Median Blurring</a></li>
 						<li class="waves-effect"><a href="filters/blur_php/blur_bilat.php">Bilateral Filtering</a></li>
 					</ul>
@@ -83,14 +83,14 @@
 			</div>
 		</div> <!-- ROW 1 ENDS -->
 		<!-- ROW 2 BEGINS-->
-		<div class="row" id='row2'>
+		<div class="row">
 			<div class='col-md-4'>
 				<div id="filter-box" class="zoomdiv" style='height: 300px; width: 400px; margin-left: 40px;'>
 					<h2>Smoothing Frequency Domain Filters</h2>
 					<ul>
-						<li class="waves-effect"><a href="#" data-toggle="modal" data-target="#ideal_low_pass">Ideal Low Pass Filter</a></li>
-						<li class="waves-effect"><a href="#" data-toggle="modal" data-target="#bw_low_pass">Butterworth Low Pass Filter</a></li>
-						<li class="waves-effect"><a href="#" data-toggle="modal" data-target="#gauss_low_pass">Gaussian Low Pass Filter</a></li>
+						<li class="waves-effect"><a href="#ideal_low_pass" data-toggle="modal">Ideal Low Pass Filter</a></li>
+						<li class="waves-effect"><a href="#bw_low_pass" data-toggle="modal">Butterworth Low Pass Filter</a></li>
+						<li class="waves-effect"><a href="#gauss_low_pass" data-toggle="modal">Gaussian Low Pass Filter</a></li>
 					</ul>
 				</div>
 			</div>
@@ -98,10 +98,10 @@
 				<div id="filter-box" class="zoomdiv" style='height: 350px; width: 400px;'>
 					<h2>Sharpening Frequency Domain Filters</h2>
 					<ul>
-						<li class="waves-effect"><a href="#" data-toggle="modal" data-target="#ideal_high_pass">Ideal High Pass Filter</a></li>
-						<li class="waves-effect"><a href="#" data-toggle="modal" data-target="#bw_high_pass">Butterworth High Pass Filter</a></li>
-						<li class="waves-effect"><a href="#" data-toggle="modal" data-target="#gauss_high_pass">Gaussian High Pass Filter</a></li>
-						<li class="waves-effect"><a href="#" data-toggle="modal" data-target="#homo_fil">Homomorphic Filtering</a></li>
+						<li class="waves-effect"><a href="#ideal_high_pass" data-toggle="modal">Ideal High Pass Filter</a></li>
+						<li class="waves-effect"><a href="#bw_high_pass" data-toggle="modal">Butterworth High Pass Filter</a></li>
+						<li class="waves-effect"><a href="#gauss_high_pass" data-toggle="modal">Gaussian High Pass Filter</a></li>
+						<li class="waves-effect"><a href="#homo_fil" data-toggle="modal">Homomorphic Filtering</a></li>
 					</ul>
 				</div>
 			</div>
@@ -122,7 +122,7 @@
 			</div>
 		</div> <!-- ROW 2 ENDS -->
 		<!-- ROW 3 BEGINS-->
-		<div class="row" id='row3'>
+		<div class="row">
 			<div class="col-md-4">
 				<div id="filter-box" class="zoomdiv" style='height: 420px; width: 400px; margin-left: 40px;'>
 					<h2>Image Thresholding</h2>
@@ -163,7 +163,7 @@
 			</div>
 		</div> <!-- ROW 3 ENDS -->
 		<!-- ROW 4 BEGINS-->
-		<div class="row" id='row4'>
+		<div class="row">
 			<div class='col-md-4'>
 				<div id="filter-box" class="zoomdiv" style='width: 420px; height: 360px; margin-left: 40px;'>
 					<h2>Morphological Transformation</h2>
