@@ -52,9 +52,9 @@
 				<div id="filter-box" class="zoomdiv" style='height: 400px; width: 400px; margin-left: 40px;'>
 					<h2>Simple intensity transformation</h2>
 					<ul>
-						<li class="waves-effect"><a href="filters/simple_int_trans/negative.php" onclick="document.getElementById('s3').style.display=''">Image Negatives</a><div class="spinner-grow text-warning" id='s3' style="display: none;"></div></li>
-						<li class="waves-effect"><a href="filters/simple_int_trans/cont_stretch_lin.php" onclick="document.getElementById('s4').style.display=''">Contrast Stretching [Linear]</a><div class="spinner-grow text-warning" id='s4' style="display: none;"></div></li>
-						<li class="waves-effect"><a href="filters/simple_int_trans/cont_stretch_nlin.php" onclick="document.getElementById('s5').style.display=''">Contrast Stretching [Non Linear]</a><div class="spinner-grow text-warning" id='s5' style="display: none;"></div></li>
+						<li class="waves-effect"><a href="filters/simple_int_trans/negative.php">Image Negatives</a></li>
+						<li class="waves-effect"><a href="filters/simple_int_trans/cont_stretch_lin.php">Contrast Stretching [Linear]</a></li>
+						<li class="waves-effect"><a href="filters/simple_int_trans/cont_stretch_nlin.php">Contrast Stretching [Non Linear]</a></li>
 						<li class="waves-effect"><a href="#" data-toggle="modal" data-target="#range_comp">Range Compression</a></li>
 						<li class="waves-effect"><a href="#" data-toggle="modal" data-target="#gamma_trans">Gamma Transformation</a></li>
 					</ul>
@@ -144,8 +144,8 @@
 				<div id="filter-box" class="zoomdiv" style='height: 250px; width: 400px;'>
 					<h2>Gaussian Noise Reduction</h2>
 					<ul>
-						<li class="waves-effect"><a href="filters/noise_reduc_php/noise_reduc.php" onclick="document.getElementById('s1').style.display=''">Noise Reduction</a><div class="spinner-grow text-warning" id='s1' style="display: none;"></div></li>
-						<li class="waves-effect"><div class="spinner-grow text-warning" id='s2' style="display: none;"></div><a href="filters/noise_reduc_php/noise_reduc_bw.php" onclick="document.getElementById('s2').style.display=''">Noise Reduction For Grayscale Image</a></li>
+						<li class="waves-effect"><a href="filters/noise_reduc_php/noise_reduc.php">Noise Reduction</a></li>
+						<li class="waves-effect"><a href="filters/noise_reduc_php/noise_reduc_bw.php">Noise Reduction For Grayscale Image</a></li>
 					</ul>
 				</div>
 			</div>
@@ -157,7 +157,7 @@
 						<li class="waves-effect"><a href="filters/img_grad_php/sobx.php">Sobel X</a></li>
 						<li class="waves-effect"><a href="filters/img_grad_php/soby.php">Sobel Y</a></li>
 						<li class="waves-effect"><a href="filters/canny_php/canny.php">Canny Edge Detection</a></li>
-						<li class="waves-effect"><a href="filters/img_grad_php/prewitt_grad.php" onclick="document.getElementById('s6').style.display=''">Prewitt Filter </a><div class="spinner-grow text-warning" id='s6' style="display: none;"></div></li>
+						<li class="waves-effect"><a href="filters/img_grad_php/prewitt_grad.php">Prewitt Filter</a></li>
 					</ul>
 				</div>
 			</div>
