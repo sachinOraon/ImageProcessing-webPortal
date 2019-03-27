@@ -41,7 +41,7 @@
 						<label class="custom-file-label" for="customFile">Choose file</label>
 					</div>
 				</div>
-				<button style="margin-left:17%" class="btn morpheus-den-gradient waves-effect hoverable" type="submit" name="upload"><i class="fas fa-arrow-alt-circle-up"></i>&nbsp;UPLOAD</button>
+				<button style="margin-left:17%" class="btn btn-primary morpheus-den-gradient waves-effect hoverable" type="submit" name="upload"><i class="fas fa-arrow-alt-circle-up"></i>&nbsp;UPLOAD</button>
 				<?php
 					session_start();
 					if(isset($_SESSION['err']))
