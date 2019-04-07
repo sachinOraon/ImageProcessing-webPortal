@@ -1,5 +1,6 @@
 <?php
 	session_start();
+	if(!isset($_SESSION['fname'])) header('Location:../../index.php');
 	$cmd='python ../histogram_py/hist_col.py "'.$_SESSION['fname'].'" '.$_SESSION['fext'];
 	$cout=shell_exec($cmd);
 
@@ -38,19 +39,27 @@
 		<div class="row img-box" style="margin:10px;">
 			<div class="col-md-9"><h2>Image Processing</h2></div>
 			<div class="col-md-3">
-				<a href="../../index.php" class="btn purple-gradient waves-effect float-right" role="button"><i class="fas fa-home"></i></a>
-				<a href="../../filters.php" class="btn peach-gradient waves-effect float-right" role="button"><i class="fas fa-arrow-left"></i></a>
+				<a href="../../index.php" class="btn purple-gradient float-right" role="button"><i class="fas fa-home"></i></a>
+				<a href="../../filters.php" class="btn peach-gradient float-right" role="button"><i class="fas fa-arrow-left"></i></a>
 			</div>
 		</div><br><br>
 		<div class="row">
 			<div class="col-md-5 img-box" style='margin-left:40px'>
 				<h3 class="text-center" style='font-family:Tw cen mt'>Color Image</h3>
-				<?php echo '<img src="../../images/'.$_SESSION['fname'].'" class=\'rounded img-fluid mx-auto d-block\'>'; ?>
+				<?php
+					if(file_exists('../../images/'.$_SESSION['fname']))
+						echo '<img src="../../images/'.$_SESSION['fname'].'" class=\'rounded img-fluid mx-auto d-block\'>';
+					else echo '<img src="../../img/failed.png" class=\'rounded img-fluid mx-auto d-block\'>';
+				?>
 			</div>
 			<div class="col-md-1"></div>
 			<div class="col-md-5 img-box">
 				<h3 class="text-center" style='font-family:Tw cen mt'><?php echo $_SESSION['filter']; ?></h3>
-				<?php echo '<img src="'.$_SESSION['outimg'].'" class=\'img-fluid mx-auto d-block\'>'; ?>
+				<?php
+					if(file_exists($_SESSION['outimg']))
+						echo '<img src="'.$_SESSION['outimg'].'" class=\'img-fluid mx-auto d-block\'>';
+					else echo '<img src="../../img/failed.png" class=\'rounded img-fluid mx-auto d-block\'>';
+				?>
 			</div>
 			<div class="col-md-1"></div>
 		</div>

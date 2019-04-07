@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<?php session_start(); echo '<title>'.$_SESSION['title'].'</title>'; ?>
+	<?php session_start(); if(!isset($_SESSION['title'])) header('Location:index.php'); echo '<title>'.$_SESSION['title'].'</title>'; ?>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">

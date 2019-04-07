@@ -1,5 +1,6 @@
 <?php
 	session_start();
+	if(!isset($_SESSION['fname'])) header('Location:../../index.php');
 	$cmd='python ../histogram_py/hist_gray.py "'.$_SESSION['fname'].'" '.$_SESSION['fext'];
 	$cout=shell_exec($cmd);
 
@@ -47,12 +48,20 @@
 			
 			<div class="col-md-5 img-box" style='margin-left:40px'>
 				<h3 class="text-center" style='font-family:Tw cen mt'>Grayscale Image</h3>
-				<?php echo '<img src="'.$_SESSION['gray_img'].'" class=\'rounded img-fluid mx-auto d-block\'>'; ?>
+				<?php
+					if(file_exists($_SESSION['gray_img']))
+						echo '<img src="'.$_SESSION['gray_img'].'" class=\'rounded img-fluid mx-auto d-block\'>';
+					else echo '<img src="../../img/failed.png" class=\'rounded img-fluid mx-auto d-block\'>';
+				?>
 			</div>
 			<div class="col-md-1"></div>
 			<div class="col-md-5 img-box">
 				<h3 class="text-center" style='font-family:Tw cen mt'><?php echo $_SESSION['filter']; ?></h3>
-				<?php echo '<img src="'.$_SESSION['outimg'].'" class=\'mx-auto d-block img-fluid\'>'; ?>
+				<?php
+					if(file_exists($_SESSION['outimg']))
+						echo '<img src="'.$_SESSION['outimg'].'" class=\'rounded img-fluid mx-auto d-block\'>';
+					else echo '<img src="../../img/failed.png" class=\'rounded img-fluid mx-auto d-block\'>';
+				?>
 			</div>
 			<div class="col-md-2"></div>
 		</div>
