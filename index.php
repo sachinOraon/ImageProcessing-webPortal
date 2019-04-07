@@ -56,7 +56,7 @@
 							$msg='Invalid file selected !';
 						if($_SESSION['err']==5)
 							$msg='Please select a file first !';
-						echo '<div class="row"><div style="margin-left:10%" class="text-center col-md-4 alert alert-danger alert-dismissible fade show">
+						echo '<div class="row"><div id="alert-div" style="margin-left:10%" class="text-center col-md-4 alert alert-danger alert-dismissible fade show">
 							<button type="button" class="close" data-dismiss="alert">&times;</button>
 							<strong>'.$msg.'</strong></div></div>';
 						unset($_SESSION['err']);
@@ -68,6 +68,11 @@
 				$(".custom-file-input").on("change", function() {
 					var fileName = $(this).val().split("\\").pop();
 					$(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+				});
+				// To hide the alert msg
+				$(".custom-file-input").on("click", function(){
+					var id=document.getElementById('alert-div');
+					id.style.display='none';
 				});
 			</script>
 		</div>
