@@ -1,3 +1,6 @@
+<?php
+	session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -103,7 +106,11 @@
       <div class="carousel-inner" role="listbox">
 
         <!--First slide-->
-        <div id='firstSlide' class="carousel-item active">
+        <?php
+        	if(isset($_SESSION['upldRedir']))
+        		echo '<div class="carousel-item">';
+        	else echo '<div class="carousel-item active">';
+        ?>
           <div class="view" style="background-image: url('img/carousel1.png'); background-repeat: no-repeat; background-size: cover;">
 
             <!-- Mask & flexbox options-->
@@ -140,7 +147,12 @@
         <!--/First slide-->
 
         <!--Second slide-->
-        <div class="carousel-item">
+        <?php
+        	if(isset($_SESSION['upldRedir']))
+        		echo '<div class="carousel-item active">';
+        	else echo '<div class="carousel-item">';
+        	unset($_SESSION['upldRedir']);
+        ?>
           <div class="view" style="background-image: url('img/carousel2.png'); background-repeat: no-repeat; background-size: cover;">
 
             <!-- Mask & flexbox options-->
@@ -459,9 +471,6 @@
   new WOW().init();
 
 	$(document).ready(function(){
-	// Activate Carousel
-    $("#myCarousel").carousel();
-  
     // Enable Carousel Indicators
     $(".item1").click(function(){
       $("#myCarousel").carousel(0);
@@ -487,11 +496,6 @@
   $(".custom-file-input").on("change", function() {
     var fileName = $(this).val().split("\\").pop();
     $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
-  });
-  // To hide the alert msg
-  $(".custom-file-input").on("click", function(){
-    var id=document.getElementById('alert-div');
-    id.style.display='none';
   });
   </script>
 </body>

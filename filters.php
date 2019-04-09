@@ -47,18 +47,48 @@
 			include 'filters/freq_domain_filters/modal_homo.php';
 		?>
 
-		<script>
-			//to display loading popover
-			$(document).ready(function(){
-				$('[data-toggle="popover"]').popover();
-			});
-		</script>
 		<?php
+			//to display loading popover and uploadNotify
+			echo '<script type="text/javascript">';
+			echo '$(document).ready(function(){$(\'[data-toggle="popover"]\').popover();';
+			if(!isset($_SESSION['fname']))
+				echo '$("#uploadNotify").modal({backdrop: "static"});';
+			echo '});</script>';
+
 			function disp_popup()
 			{
 				echo 'data-trigger="focus" data-html="true" data-toggle="popover" title="<b>Please wait...</b>" data-content="<div class=\'spinner-grow peach-gradient\'></div>"';
 			}
 		?>
+
+		<!-- Modal to display upload notification -->
+		<div class="modal fade" id="uploadNotify">
+		  <div class="modal-dialog modal-sm modal-dialog-centered">
+		    <div class="modal-content cloudy-knoxville-gradient">
+
+		      <!-- Modal Header -->
+		      <div class="modal-header">
+		        <h4 class="modal-title">Upload Image</h4>
+		        <button type="button" class="close" data-dismiss="modal"><i class="fas fa-times-circle"></i></button>
+		      </div>
+
+		      <!-- Modal body -->
+		      <div class="modal-body">
+		      	<div class="row">
+		      		<div class="col-md-3">
+		      			<i class="fas fa-exclamation-circle fa-4x text-warning"></i>
+		      		</div>
+		      		<div class="col-md-9">
+		      			<p class="text-danger"><strong>Please upload an image first before applying any filter.</strong></p><br>
+		      			<?php $_SESSION['upldRedir']=1; echo '<a href="index.php" class="btn btn-info waves-effect" role="button">Upload</a>'; ?>
+		      		</div>
+		      	</div>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		<!-- Modal ends -->
+
 		<div class='row'> <!-- ROW 1 BEGINS -->
 			<div class='col-md-4'>
 				<div id="filter-box" class="zoomdiv row1" style='margin-left: 40px;'>
