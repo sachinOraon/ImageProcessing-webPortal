@@ -9,14 +9,13 @@ function alert($msg) {
 if(isset($_POST['upload'])){
 	if(!empty($_FILES['file']['name'])){
 	#getting details of file
-	$_SESSION['fname']=$_FILES['file']['name']; 
 	$fileTmpName = $_FILES['file']['tmp_name'];
 	$fileSize = $_FILES['file']['size'];
 	$fileError = $_FILES['file']['error'];
 	$fileType = $_FILES['file']['type'];
 	
 	#convert filename string to array
-	$fileExt = explode('.',$_SESSION['fname']);
+	$fileExt = explode('.',$_FILES['file']['name']);
 	
 	#convert file extension to lowercase
 	$_SESSION['fext']=strtolower(end($fileExt));
@@ -26,17 +25,18 @@ if(isset($_POST['upload'])){
 	if(in_array($_SESSION['fext'], $allowed)){
 		if(getimagesize($fileTmpName)){
 			if($fileSize<5000000){
-				$fileDestination = "images/".$_SESSION['fname'];
+				$fileDestination = "images/".$_FILES['file']['name'];
 				if(move_uploaded_file($fileTmpName, $fileDestination)){
+					$_SESSION['fname']=$_FILES['file']['name'];
 					header('Location: filters.php');
 				}
-				else { $_SESSION['err']=1; header('location:index.php'); }
+				else { $_SESSION['err']=1; $_SESSION['upldRedir']=1; header('location:index.php'); }
 			}
-			else { $_SESSION['err']=2; header('location:index.php'); }
+			else { $_SESSION['err']=2; $_SESSION['upldRedir']=1; header('location:index.php'); }
 		}
-		else { $_SESSION['err']=3; header('location:index.php'); }
-	}else { $_SESSION['err']=4; header('location:index.php'); }
-}else { $_SESSION['err']=5; header('location:index.php');}
+		else { $_SESSION['err']=3; $_SESSION['upldRedir']=1; header('location:index.php'); }
+	}else { $_SESSION['err']=4; $_SESSION['upldRedir']=1; header('location:index.php'); }
+}else { $_SESSION['err']=5; $_SESSION['upldRedir']=1; header('location:index.php');}
 }
 
 ?>

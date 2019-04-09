@@ -80,7 +80,7 @@
 		      		</div>
 		      		<div class="col-md-9">
 		      			<p class="text-danger"><strong>Please upload an image first before applying any filter.</strong></p><br>
-		      			<?php $_SESSION['upldRedir']=1; echo '<a href="index.php" class="btn btn-info waves-effect" role="button">Upload</a>'; ?>
+		      			<?php if(!isset($_SESSION['fname'])) $_SESSION['upldRedir']=1; echo '<a href="index.php" class="btn btn-info waves-effect" role="button">Upload</a>'; ?>
 		      		</div>
 		      	</div>
 		      </div>

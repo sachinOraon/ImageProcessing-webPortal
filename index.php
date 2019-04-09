@@ -56,8 +56,44 @@
 
 <body>
 
-  <header>
+  <!-- Modal to display upload notification -->
+  <div class="modal fade" <?php if(isset($_SESSION['err'])) echo 'id="uploadErr"'; ?>>
+    <div class="modal-dialog modal-sm modal-dialog-centered">
+      <div class="modal-content cloudy-knoxville-gradient">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Upload Error</h4>
+          <button type="button" class="close" data-dismiss="modal"><i class="fas fa-times-circle"></i></button>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div class="row">
+            <div class="col" style="margin-left:30%"><i class="fas fa-exclamation-circle fa-4x text-danger"></i></div>
+          </div><br>
+          <?php
+            if(isset($_SESSION['err']))
+            {
+              if($_SESSION['err']==1)
+                $msg='Failed to upload to the server !';
+              if($_SESSION['err']==2)
+                $msg='File size limit exceeded (should be less than 5MB)';
+              if($_SESSION['err']==3)
+                $msg='Unsupported image file !';
+              if($_SESSION['err']==4)
+                $msg='Invalid file selected !';
+              if($_SESSION['err']==5)
+                $msg='Please select a file first !';
+              unset($_SESSION['err']);
+              echo '<div class="alert alert-info"><h6 class="text-center">'.$msg.'</h6></div>';
+            }
+          ?>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal ends -->
 
+  <header>
     <!-- Navbar -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
       <div class="container">
@@ -168,9 +204,7 @@
 						<input type="file" class="custom-file-input" id="customFile" name="file">
 						<label class="custom-file-label" for="customFile">Choose file</label>
 					</div>
-					<button class="btn btn-primary morpheus-den-gradient waves-effect hoverable" type="submit" name="upload">
-						<i class="fas fa-arrow-alt-circle-up"></i>&nbsp;UPLOAD
-					</button>
+					<button class="btn btn-primary morpheus-den-gradient waves-effect hoverable" type="submit" name="upload"><i class="fas fa-arrow-alt-circle-up"></i>&nbsp;UPLOAD</button>
 				</form>
               </div>
               <!-- /Content -->
@@ -486,6 +520,8 @@
     $(".carousel-control-next").click(function(){
       $("#myCarousel").carousel("next");
     });
+
+    $("#uploadErr").modal("show");
   });
 	
 	$("#customFile").on("click", function(){
