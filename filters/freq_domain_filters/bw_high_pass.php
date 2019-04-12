@@ -12,7 +12,7 @@
 	{
 		//set session variables for use in display.php
 		$_SESSION['title']='Sharpening Frequency Domain';
-		$_SESSION['filter']='Butterworth High Pass Filter [D<sub>0</sub> = '.$_SESSION['inp_cfblp'].'] [n = '.$_SESSION['inp_oblp'].']';
+		$_SESSION['filter']='Butterworth High Pass Filter [D<sub>0</sub> = '.$_SESSION['inp_cfbhp'].'] [n = '.$_SESSION['inp_obhp'].']';
 		$_SESSION['outimg']='images/'.$outfile;
 		
 		//call display.php
