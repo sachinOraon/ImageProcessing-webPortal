@@ -22,13 +22,17 @@
 	
 	<div class='container-fluid'>
 		<div class='row'>
-			<div class='col-md-11'>
+			<div class='col'>
 				<div class="animated fadeInLeft" id="heading">
-					<h1>CHOOSE &nbsp;&nbsp;FILTERS <img src="img/filter.png"></h1>
+					<div class="row">
+						<div class="col-md-11">
+							<h1>SELECT &nbsp;FILTERS &nbsp;<i class="fas fa-magic"></i></h1>
+						</div>
+						<div class="col-md-1">
+							<a href="index.php" class="float-right btn btn-outline-info waves-effect"><i class="fas fa-chevron-circle-left fa-lg"></i></a>
+						</div>
+					</div>
 				</div>
-			</div>
-			<div class='col-md-1'>
-				<a href="index.php" class="btn btn-outline-info waves-effect"><i class="fas fa-chevron-circle-left fa-lg"></i></a>
 			</div>
 		</div>
 
@@ -90,7 +94,7 @@
 		<!-- Modal ends -->
 
 		<div class='row'> <!-- ROW 1 BEGINS -->
-			<div class='col-md-4'>
+			<div class='col-md-4 animated fadeInLeft'>
 				<div id="filter-box" class="zoomdiv row1" style='margin-left: 40px;'>
 					<h2>Simple intensity transformation</h2>
 					<ul>
@@ -102,7 +106,7 @@
 					</ul>
 				</div>
 			</div>
-			<div class='col-md-4'>
+			<div class='col-md-4 animated fadeInLeft'>
 				<div id="filter-box" class="zoomdiv row1" style='margin-left: 5%'>
 					<h2>Histograms</h2>
 					<ul>
@@ -112,7 +116,7 @@
 					</ul>
 				</div>
 			</div>
-			<div class='col-md-4'>
+			<div class='col-md-4 animated fadeInRight'>
 				<div id="filter-box" class="zoomdiv row1">
 					<h2>Image Blurring</h2>
 					<ul>
@@ -126,7 +130,7 @@
 		</div> <!-- ROW 1 ENDS -->
 		<!-- ROW 2 BEGINS-->
 		<div class="row">
-			<div class='col-md-4'>
+			<div class='col-md-4 animated fadeInLeft'>
 				<div id="filter-box" class="zoomdiv row2" style='margin-left: 40px;'>
 					<h2>Smoothing Frequency Domain Filters</h2>
 					<ul>
@@ -136,7 +140,7 @@
 					</ul>
 				</div>
 			</div>
-			<div class='col-md-4'>
+			<div class='col-md-4 animated fadeInLeft'>
 				<div id="filter-box" class="zoomdiv row2" style='margin-left: 5%'>
 					<h2>Sharpening Frequency Domain Filters</h2>
 					<ul>
@@ -147,7 +151,7 @@
 					</ul>
 				</div>
 			</div>
-			<div class='col-md-4'>
+			<div class='col-md-4 animated fadeInRight'>
 				<div id="filter-box" class="zoomdiv row2">
 					<h2>Image Thresholding</h2>
 					<ul>

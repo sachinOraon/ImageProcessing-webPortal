@@ -12,6 +12,10 @@
 	if(!(strcasecmp($cout,'failed')==0))
 	{
 		$_SESSION['title']='Image Gradient';
-		header('Location: prewitt_disp.php');
+		$_SESSION['filter']='After Matrix Prewitt Filter';
+		$_SESSION['col1_title']='Grayscale Image';
+		$_SESSION['col1_img']='images/'.$tmpname.'_prewG.'.$_SESSION['fext'];;
+		$_SESSION['outimg']='images/'.$tmpname.'_prewM.'.$_SESSION['fext'];
+		header('Location: ../../display.php');
 	}
 ?>

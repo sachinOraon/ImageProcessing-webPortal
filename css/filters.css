@@ -42,7 +42,6 @@ h1{
 
 h2{
 	padding: 10px;
-	margin-top: 0px;
 	background: white;
 	text-align: center;
 	font-family: tw cen mt;
@@ -77,9 +76,8 @@ li{
 	padding: 30px;
 	background-color: transparent;
 	transition: transform .3s;
-	margin: 0 auto;
 }
 
 .zoomdiv:hover {
-	transform: scale(1.1);
+	transform: scale(1.1, 1.1);
 }

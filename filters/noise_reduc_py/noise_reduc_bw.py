@@ -14,5 +14,8 @@ name=tmp[:len(tmp)-len(ext)-1]
 output=name+'_noise_reduc_bw'+'.'+ext
 target='../../images/'+output
 
+# saving grayscaled image
+cv2.imwrite('../../images/'+name+'_noise_bw'+'.'+ext, img)
+
 if cv2.imwrite(target, dst): print(output,end='')
 else: print('failed',end='')

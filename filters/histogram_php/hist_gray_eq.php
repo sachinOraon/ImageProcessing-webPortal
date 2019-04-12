@@ -21,70 +21,82 @@
 <html>
 <head>
 	<?php echo '<title>'.$_SESSION['title'].'</title>'; ?>
-	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
+
 	<link href="../../css/bootstrap.min.css" rel="stylesheet">
 	<link href="../../css/mdb.min.css" rel="stylesheet">
+	<link href="../../css/style.css" rel="stylesheet">
 	<link href="../../css/all.css" rel="stylesheet">
-	<style>
-		.img-box
-		{
-			box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-			padding:10px;
-		}
-	</style>
+	<link href="../../css/display.css" rel="stylesheet">
 </head>
-<body>
-	<div class="container-fluid">
-		<div class="row img-box" style="margin:10px;">
-			<div class="col-md-9"><h2>Image Processing</h2></div>
-			<div class="col-md-3">
-				<a href="../../index.php" class="btn purple-gradient float-right" role="button"><i class="fas fa-home"></i></a>
-				<a href="../../filters.php" class="btn peach-gradient float-right" role="button"><i class="fas fa-arrow-left"></i></a>
+
+<body style="background-color: #232325;">
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/popper.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/mdb.js"></script>
+	
+	<div class='container-fluid'>
+		<div class='row'>
+			<div class='col'>
+				<div class="animated fadeInLeft bg-dark" id="heading">
+					<div class="row">
+						<div class="col-md-11">
+							<h2><i class="fas fa-chevron-left"></i> Output Generated <i class="fas fa-chevron-right"></i></h2>
+						</div>
+						<div class="col-md-1">
+							<a href="../../filters.php" class="float-right btn btn-outline-info waves-effect"><i class="fas fa-chevron-circle-left fa-lg"></i></a>
+						</div>
+					</div>
+				</div>
 			</div>
-		</div><br><br>
-		<div class="row">
-			<div class="col-md-5 img-box" style='margin-left:40px'>
-				<h3 class="text-center" style='font-family:Tw cen mt'>Grayscale Image</h3>
-				<?php
-					if(file_exists($_SESSION['gray_img']))
-						echo '<img src="'.$_SESSION['gray_img'].'" class=\'rounded img-fluid mx-auto d-block\'>';
-					else echo '<img src="../../img/failed.png" class=\'rounded img-fluid mx-auto d-block\'>';
-				?>
+		</div>
+		<div class='row'>
+			<div class='col' style="margin-left:3%">
+				<div id="filter-box" class="animated fadeInLeft">
+					<h4>Grayscale Image</h4>
+					<?php
+						if(file_exists($_SESSION['gray_img']))
+							echo '<img src="'.$_SESSION['gray_img'].'" class=\'img-fluid mx-auto d-block\'>';
+						else echo '<img src="../../img/failed.png" class=\'img-fluid mx-auto d-block\'>';
+					?>
+				</div>
 			</div>
-			<div class="col-md-1"></div>
-			<div class="col-md-5 img-box">
-				<h3 class="text-center" style='font-family:Tw cen mt'>After Histogram Equalization</h3>
-				<?php
-					if(file_exists($_SESSION['gray_eq']))
-						echo '<img src="'.$_SESSION['gray_eq'].'" class=\'rounded img-fluid mx-auto d-block\'>';
-					else echo '<img src="../../img/failed.png" class=\'rounded img-fluid mx-auto d-block\'>';
-				?>
+			<div class="col" style="margin-right:3%; margin-left:1%">
+				<div id="filter-box" class="animated fadeInRight">
+					<h4>After Histogram Equalization</h4>
+					<?php
+						if(file_exists($_SESSION['gray_eq']))
+							echo '<img src="'.$_SESSION['gray_eq'].'" class=\'img-fluid mx-auto d-block\'>';
+						else echo '<img src="../../img/failed.png" class=\'img-fluid mx-auto d-block\'>';
+					?>
+				</div>
 			</div>
-			<div class="col-md-2"></div>
-		</div> <!-- ROW 1 ENDS -->
-		<div class="row">
-			<div class="col-md-5 img-box" style='margin-left:40px; margin-top:30px'>
-				<h3 class="text-center" style='font-family:Tw cen mt'>Histogram</h3>
-				<?php
-					if(file_exists($_SESSION['hist_gray']))
-						echo '<img src="'.$_SESSION['hist_gray'].'" class=\'rounded img-fluid mx-auto d-block\'>';
-					else echo '<img src="../../img/failed.png" class=\'rounded img-fluid mx-auto d-block\'>';
-				?>
+		</div>
+		<div class='row'>
+			<div class='col' style="margin-left:3%">
+				<div id="filter-box" class="animated fadeInLeft">
+					<h4>Histogram</h4>
+					<?php
+						if(file_exists($_SESSION['hist_gray']))
+							echo '<img src="'.$_SESSION['hist_gray'].'" class=\'img-fluid mx-auto d-block\'>';
+						else echo '<img src="../../img/failed.png" class=\'img-fluid mx-auto d-block\'>';
+					?>
+				</div>
 			</div>
-			<div class="col-md-1"></div>
-			<div class="col-md-5 img-box" style='margin-top:30px'>
-				<h3 class="text-center" style='font-family:Tw cen mt'>Equalized Histogram</h3>
-				<?php
-					if(file_exists($_SESSION['hist_gray_eq']))
-						echo '<img src="'.$_SESSION['hist_gray_eq'].'" class=\'rounded img-fluid mx-auto d-block\'>';
-					else echo '<img src="../../img/failed.png" class=\'rounded img-fluid mx-auto d-block\'>';
-				?>
+			<div class="col" style="margin-right:3%; margin-left:1%">
+				<div id="filter-box" class="animated fadeInRight">
+					<h4>Equalized Histogram</h4>
+					<?php
+						if(file_exists($_SESSION['hist_gray_eq']))
+							echo '<img src="'.$_SESSION['hist_gray_eq'].'" class=\'img-fluid mx-auto d-block\'>';
+						else echo '<img src="../../img/failed.png" class=\'img-fluid mx-auto d-block\'>';
+					?>
+				</div>
 			</div>
-			<div class="col-md-2"></div>
-		</div> <!-- ROW 2 ENDS -->
-	</div> <!-- CONTAINER DIV ENDS -->
+		</div>
+	</div>
 </body>
 </html>
