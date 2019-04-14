@@ -52,8 +52,6 @@
 								echo '<img src="images/'.$_SESSION['fname'].'" class=\'img-fluid mx-auto d-block\'>';
 							else echo '<img src="img/failed.png" class=\'img-fluid mx-auto d-block\'>';
 						}
-						unset($_SESSION['col1_title']);
-						unset($_SESSION['col1_img']);
 					?>
 				</div>
 			</div>

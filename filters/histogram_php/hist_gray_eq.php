@@ -38,7 +38,7 @@
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/mdb.js"></script>
 	
-	<div class='container-fluid'>
+	<div class='container-fluid' style="margin-bottom:2%">
 		<div class='row'>
 			<div class='col'>
 				<div class="animated fadeInLeft bg-dark" id="heading">
