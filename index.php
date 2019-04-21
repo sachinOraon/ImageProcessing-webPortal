@@ -130,14 +130,6 @@
 
     <!--Carousel Wrapper-->
     <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
-
-      <!--Indicators-->
-      <ol class="carousel-indicators">
-        <li class="item1 active"></li>
-        <li class="item2"></li>
-      </ol>
-      <!--/.Indicators-->
-
       <!--Slides-->
       <div class="carousel-inner" role="listbox">
 
@@ -150,15 +142,15 @@
           <div class="view" style="background-image: url('img/carousel1.png'); background-repeat: no-repeat; background-size: cover;">
 
             <!-- Mask & flexbox options-->
-            <div class="mask rgba-black-strong d-flex justify-content-center align-items-center">
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
 
               <!-- Content -->
               <div class="text-center white-text mx-5 wow fadeIn">
-                <h1 class="mb-4">
+                <h1 class="mb-4" style="text-shadow: 4px 4px 8px #000000;">
                   <strong>Digital Image Processing using Matlab and OpenCV</strong>
                 </h1>
 
-                <p>
+                <p class="lead">
                   <strong>Upload an image file and apply various filters on it.</strong>
                 </p>
 
@@ -196,7 +188,7 @@
 
               <!-- Content -->
               <div class="text-center white-text mx-5 wow fadeIn">
-                <h1 class="mb-4">
+                <h1 class="mb-4" style="text-shadow: 4px 4px 8px #000000;">
                   <strong>Upload Image</strong>
                 </h1>
 				<form action="upload.php" method="POST" enctype="multipart/form-data">
@@ -501,38 +493,31 @@
   <script type="text/javascript" src="js/mdb.min.js"></script>
   <!-- Initializations -->
   <script type="text/javascript">
-  // Animations initialization
-  new WOW().init();
+    // Animations initialization
+    new WOW().init();
 
-	$(document).ready(function(){
-    // Enable Carousel Indicators
-    $(".item1").click(function(){
-      $("#myCarousel").carousel(0);
-    });
-    $(".item2").click(function(){
-      $("#myCarousel").carousel(1);
-    });
+    $(document).ready(function(){
+      // Enable Carousel Controls
+      $(".carousel-control-prev").click(function(){
+        $("#myCarousel").carousel("prev");
+      });
 
-    // Enable Carousel Controls
-    $(".carousel-control-prev").click(function(){
-      $("#myCarousel").carousel("prev");
-    });
-    $(".carousel-control-next").click(function(){
-      $("#myCarousel").carousel("next");
+      $(".carousel-control-next").click(function(){
+        $("#myCarousel").carousel("next");
+      });
+
+      $("#uploadErr").modal("show");
     });
 
-    $("#uploadErr").modal("show");
-  });
-	
-	$("#customFile").on("click", function(){
-		$("#myCarousel").carousel("pause");
-	});
+    $("#customFile").on("click", function(){
+		  $("#myCarousel").carousel("pause");
+    });
 
-  // To show the name of file choosen while uploading
-  $(".custom-file-input").on("change", function() {
-    var fileName = $(this).val().split("\\").pop();
-    $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
-  });
+    // To show the name of file choosen while uploading
+    $(".custom-file-input").on("change", function() {
+      var fileName = $(this).val().split("\\").pop();
+      $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+    });
   </script>
 </body>
 </html>

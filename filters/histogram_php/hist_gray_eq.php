@@ -44,7 +44,7 @@
 				<div class="animated fadeInLeft bg-dark" id="heading">
 					<div class="row">
 						<div class="col-md-11">
-							<h2><i class="fas fa-chevron-left"></i> Output Generated <i class="fas fa-chevron-right"></i></h2>
+							<h2 style="text-shadow: 0 0 10px #00c9cb, 0 0 12px #00c9cb, 0 0 14px #00c9cb, 0 0 16px #00c9cb, 0 0 18px #00c9cb;"><i class="fas fa-chevron-left"></i> Output Generated <i class="fas fa-chevron-right"></i></h2>
 						</div>
 						<div class="col-md-1">
 							<a href="../../filters.php" class="float-right btn btn-outline-info waves-effect"><i class="fas fa-chevron-circle-left fa-lg"></i></a>

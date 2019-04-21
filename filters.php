@@ -26,7 +26,7 @@
 				<div class="animated fadeInLeft" id="heading">
 					<div class="row">
 						<div class="col-md-11">
-							<h1>SELECT &nbsp;FILTERS &nbsp;<i class="fas fa-magic"></i></h1>
+							<h1 style="text-shadow: 0 0 10px #00c9cb, 0 0 12px #00c9cb, 0 0 14px #00c9cb, 0 0 16px #00c9cb, 0 0 18px #00c9cb;">SELECT &nbsp;FILTERS &nbsp;<i class="fas fa-magic"></i></h1>
 						</div>
 						<div class="col-md-1">
 							<a href="index.php" class="float-right btn btn-outline-info waves-effect"><i class="fas fa-chevron-circle-left fa-lg"></i></a>
