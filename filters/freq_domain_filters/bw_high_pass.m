@@ -64,10 +64,10 @@ function flag=bw_low_pass(img, outimg, cfreq, order)
 	% retaining the ral parts of the matrix
 	rim=real(rim);
 	rim=uint8(rim);
-	if contains(img, 'jpg') || contains(img, 'jpeg')
-		imwrite(rim, outimg, 'jpg', 'Quality', 100, 'Bitdepth', 8);
-	else
+	%if contains(img, 'jpg') || contains(img, 'jpeg')
+	%	imwrite(rim, outimg, 'jpg', 'Quality', 100, 'Bitdepth', 8);
+	%else
 		imwrite(rim, outimg);
-	end
+	%end
 	flag=1;
 end

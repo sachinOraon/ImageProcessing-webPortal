@@ -26,10 +26,10 @@ function flag=ideal_low_pass(img, outimg, cfreq)
 	out=uint8(abs(g));
 	
 	%saving file
-	if contains(img, 'jpg') || contains(img, 'jpeg')
-		imwrite(out, outimg, 'jpg', 'Quality', 100, 'Bitdepth', 8);
-	else
+	%if contains(img, 'jpg') || contains(img, 'jpeg')
+	%	imwrite(out, outimg, 'jpg', 'Quality', 100, 'Bitdepth', 8);
+	%else
 		imwrite(out, outimg);
-	end
+	%end
 	flag=1;
 end

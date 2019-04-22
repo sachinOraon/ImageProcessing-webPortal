@@ -14,11 +14,11 @@ function flag=prewitt_grad(img, outMimg, outAimg, grayimg)
 	M_prewitt = abs(i_p_x) + abs(i_p_y);
 
 	%alpha matrix in degrees
-	Alpha_prewitt = atand(i_p_y/i_p_x);
+	%Alpha_prewitt = atand(i_p_y/i_p_x);
 
 	%save to disk
 	imwrite(i, grayimg);
 	imwrite(M_prewitt, outMimg);
-	imwrite(Alpha_prewitt, outAimg);
+	%imwrite(Alpha_prewitt, outAimg);
 	flag=1;
 end

@@ -25,7 +25,11 @@
 				<div class="animated fadeInLeft bg-dark" id="heading">
 					<div class="row">
 						<div class="col-md-11">
-							<h2 style="text-shadow: 0 0 10px #00c9cb, 0 0 12px #00c9cb, 0 0 14px #00c9cb, 0 0 16px #00c9cb, 0 0 18px #00c9cb;"><i class="fas fa-chevron-left"></i> Output Generated <i class="fas fa-chevron-right"></i></h2>
+							<?php
+								if(file_exists($_SESSION['outimg']))
+									echo '<h2 style="text-shadow: 0 0 10px #00c9cb, 0 0 12px #00c9cb, 0 0 14px #00c9cb, 0 0 16px #00c9cb, 0 0 18px #00c9cb; display:block;">Output Generated</h2>';
+								else echo '<h2 id="failed" style="text-shadow: 0 0 10px #ff0000, 0 0 12px #ff0000, 0 0 14px #ff0000, 0 0 16px #ff0000, 0 0 18px #ff0000; display:none;">Failed To Process !</h2>';
+							?>						
 						</div>
 						<div class="col-md-1">
 							<a href="filters.php" class="float-right btn btn-outline-info waves-effect"><i class="fas fa-chevron-circle-left fa-lg"></i></a>
@@ -44,6 +48,7 @@
 							if(file_exists($_SESSION['col1_img']))
 								echo '<img src="'.$_SESSION['col1_img'].'" class=\'img-fluid mx-auto d-block\'>';
 							else echo '<img src="img/failed.png" class=\'img-fluid mx-auto d-block\'>';
+							unset($_SESSION['col1_title']);
 						}
 						else
 						{

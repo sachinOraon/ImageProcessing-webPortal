@@ -17,10 +17,10 @@ function flag=homomorphic(img, outimg, cfreq)
 	Iout = Iout(1:size(I,1),1:size(I,2));
 	Ihmf = exp(Iout) - 1;
 	%saving file
-	if contains(img, 'jpg') || contains(img, 'jpeg')
-		imwrite(Ihmf, outimg, 'jpg', 'Quality', 100, 'Bitdepth', 8);
-	else
+	%if contains(img, 'jpg') || contains(img, 'jpeg')
+	%	imwrite(Ihmf, outimg, 'jpg', 'Quality', 100, 'Bitdepth', 8);
+	%else
 		imwrite(Ihmf, outimg);
-	end
+	%end
 	flag=1;
 end
