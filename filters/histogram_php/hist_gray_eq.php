@@ -45,9 +45,9 @@
 					<div class="row">
 						<div class="col-md-11">
 							<?php
-								if(file_exists($_SESSION['gray_eq']))
-									echo '<h2 style="text-shadow: 0 0 10px #00c9cb, 0 0 12px #00c9cb, 0 0 14px #00c9cb, 0 0 16px #00c9cb, 0 0 18px #00c9cb; display:block;">Output Generated</h2>';
-								else echo '<h2 id="failed" style="text-shadow: 0 0 10px #ff0000, 0 0 12px #ff0000, 0 0 14px #ff0000, 0 0 16px #ff0000, 0 0 18px #ff0000; display:none;">Failed To Process !</h2>';
+								if(file_exists($_SESSION['gray_eq']) && !is_dir($_SESSION['gray_eq']))
+									echo '<h2 style="text-shadow: 0 0 10px #00c9cb, 0 0 12px #00c9cb, 0 0 14px #00c9cb, 0 0 16px #00c9cb, 0 0 18px #00c9cb;">Output Generated</h2>';
+								else echo '<h2 style="text-shadow: 0 0 10px #ff0000, 0 0 12px #ff0000, 0 0 14px #ff0000, 0 0 16px #ff0000, 0 0 18px #ff0000;">Failed To Process !</h2>';
 							?>
 						</div>
 						<div class="col-md-1">
@@ -62,7 +62,7 @@
 				<div id="filter-box" class="animated fadeInLeft">
 					<h4>Grayscale Image</h4>
 					<?php
-						if(file_exists($_SESSION['gray_img']))
+						if(file_exists($_SESSION['gray_img']) && !is_dir($_SESSION['gray_img']))
 							echo '<img src="'.$_SESSION['gray_img'].'" class=\'img-fluid mx-auto d-block\'>';
 						else echo '<img src="../../img/failed.png" class=\'img-fluid mx-auto d-block\'>';
 					?>
@@ -72,7 +72,7 @@
 				<div id="filter-box" class="animated fadeInRight">
 					<h4>After Histogram Equalization</h4>
 					<?php
-						if(file_exists($_SESSION['gray_eq']))
+						if(file_exists($_SESSION['gray_eq']) && !is_dir($_SESSION['gray_eq']))
 							echo '<img src="'.$_SESSION['gray_eq'].'" class=\'img-fluid mx-auto d-block\'>';
 						else echo '<img src="../../img/failed.png" class=\'img-fluid mx-auto d-block\'>';
 					?>
@@ -84,7 +84,7 @@
 				<div id="filter-box" class="animated fadeInLeft">
 					<h4>Histogram</h4>
 					<?php
-						if(file_exists($_SESSION['hist_gray']))
+						if(file_exists($_SESSION['hist_gray']) && !is_dir($_SESSION['hist_gray']))
 							echo '<img src="'.$_SESSION['hist_gray'].'" class=\'img-fluid mx-auto d-block\'>';
 						else echo '<img src="../../img/failed.png" class=\'img-fluid mx-auto d-block\'>';
 					?>
@@ -94,7 +94,7 @@
 				<div id="filter-box" class="animated fadeInRight">
 					<h4>Equalized Histogram</h4>
 					<?php
-						if(file_exists($_SESSION['hist_gray_eq']))
+						if(file_exists($_SESSION['hist_gray_eq']) && !is_dir($_SESSION['hist_gray_eq']))
 							echo '<img src="'.$_SESSION['hist_gray_eq'].'" class=\'img-fluid mx-auto d-block\'>';
 						else echo '<img src="../../img/failed.png" class=\'img-fluid mx-auto d-block\'>';
 					?>

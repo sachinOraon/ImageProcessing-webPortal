@@ -26,9 +26,9 @@
 					<div class="row">
 						<div class="col-md-11">
 							<?php
-								if(file_exists($_SESSION['outimg']))
-									echo '<h2 style="text-shadow: 0 0 10px #00c9cb, 0 0 12px #00c9cb, 0 0 14px #00c9cb, 0 0 16px #00c9cb, 0 0 18px #00c9cb; display:block;">Output Generated</h2>';
-								else echo '<h2 id="failed" style="text-shadow: 0 0 10px #ff0000, 0 0 12px #ff0000, 0 0 14px #ff0000, 0 0 16px #ff0000, 0 0 18px #ff0000; display:none;">Failed To Process !</h2>';
+								if(!is_dir($_SESSION['outimg']) && file_exists($_SESSION['outimg']))
+									echo '<h2 style="text-shadow: 0 0 10px #00c9cb, 0 0 12px #00c9cb, 0 0 14px #00c9cb, 0 0 16px #00c9cb, 0 0 18px #00c9cb;">Output Generated</h2>';
+								else echo '<h2 style="text-shadow: 0 0 10px #ff0000, 0 0 12px #ff0000, 0 0 14px #ff0000, 0 0 16px #ff0000, 0 0 18px #ff0000;">Failed To Process !</h2>';
 							?>						
 						</div>
 						<div class="col-md-1">
@@ -64,7 +64,7 @@
 				<div id="filter-box" class="animated fadeInRight">
 					<h4><?php echo $_SESSION['filter']; ?></h4>
 					<?php
-						if(file_exists($_SESSION['outimg']))
+						if(!is_dir($_SESSION['outimg']) && file_exists($_SESSION['outimg']))
 							echo '<img src="'.$_SESSION['outimg'].'" class=\'img-fluid mx-auto d-block\'>';
 						else echo '<img src="img/failed.png" class=\'img-fluid mx-auto d-block\'>';
 					?>

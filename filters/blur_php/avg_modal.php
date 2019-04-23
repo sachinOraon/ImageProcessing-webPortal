@@ -18,11 +18,7 @@
 				<?php
 				if(isset($_SESSION['fname']))
 				{
-					$imgpath='images/'.$_SESSION['fname'];
-					list($width, $height)=getimagesize($imgpath);
-					$_SESSION['imgw']=$width;
-					$_SESSION['imgh']=$height;
-					
+					$imgpath='images/'.$_SESSION['fname'];					
 					echo '<form action="filters.php" method="POST">';
 				}
 				else
@@ -32,9 +28,9 @@
 				}
 				?>
 					<label>Width : <span id="spn_kWavg">5</span></label>
-					<input type="range" class="custom-range" id="inp_kWavg" name="inp_kWavg" value="5" min="1" max=<?php echo '"'.$_SESSION['imgw'].'"'; ?>>
+					<input type="range" class="custom-range" id="inp_kWavg" name="inp_kWavg" value="5" min="1" max="30">
 					<label>Height : <span id="spn_kHavg">5</span></label>
-					<input type="range" class="custom-range" id="inp_kHavg" name="inp_kHavg" value="5" min="1" max=<?php echo '"'.$_SESSION['imgh'].'"'; ?>>
+					<input type="range" class="custom-range" id="inp_kHavg" name="inp_kHavg" value="5" min="1" max="30">
 					<!-- Javascript to show range values -->
 					<script>
 						var inp_kWavg = document.getElementById("inp_kWavg");
